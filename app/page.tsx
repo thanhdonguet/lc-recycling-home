@@ -1,5 +1,6 @@
 import { BookingForm } from './booking-form';
 import { ImageLightbox } from './image-lightbox';
+import { StoryDialog } from './story-dialog';
 import blog1Caption from '../src/blogs/blog1/blog1.txt?raw';
 import blog2Caption from '../src/blogs/blog2/blog2.txt?raw';
 import blog3Caption from '../src/blogs/blog3/blog3.txt?raw';
@@ -125,42 +126,15 @@ export default function Home() {
         <div className="experience-grid">
           <article className="experience-card experience-card-tall">
             <div className="experience-image experience-image-materials" aria-hidden="true" />
-            <details className="experience-story">
-              <summary className="experience-card-copy">
-                <p>01 · Vòng đời mới</p>
-                <h3>Vẻ đẹp của những điều được làm lại.</h3>
-                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
-              </summary>
-              <div className="experience-caption">
-                {blog1Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
-            </details>
+            <StoryDialog number="01" kicker="Vòng đời mới" title="Vẻ đẹp của những điều được làm lại." caption={blog1Caption} />
           </article>
           <article className="experience-card">
             <div className="experience-image experience-image-stream" aria-hidden="true" />
-            <details className="experience-story">
-              <summary className="experience-card-copy">
-                <p>02 · Giữa thiên nhiên</p>
-                <h3>Dòng suối và bình yên.</h3>
-                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
-              </summary>
-              <div className="experience-caption">
-                {blog2Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
-            </details>
+            <StoryDialog number="02" kicker="Giữa thiên nhiên" title="Dòng suối và bình yên." caption={blog2Caption} />
           </article>
           <article className="experience-card experience-card-accent">
             <div className="experience-image experience-image-reborn" aria-hidden="true" />
-            <details className="experience-story">
-              <summary className="experience-card-copy">
-                <p>03 · Những bông hoa không héo</p>
-                <h3>Câu chuyện sống lại của rác.</h3>
-                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
-              </summary>
-              <div className="experience-caption">
-                {blog3Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-              </div>
-            </details>
+            <StoryDialog number="03" kicker="Những bông hoa không héo" title="Câu chuyện sống lại của rác." caption={blog3Caption} />
           </article>
         </div>
       </section>
