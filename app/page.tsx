@@ -16,6 +16,8 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Điều hướng chính">
           <a href="#cau-chuyen">Câu chuyện</a>
           <a href="#phong">Phòng</a>
+          <a href="#trai-nghiem">Trải nghiệm</a>
+          <a href="#am-thuc">Ẩm thực</a>
           <a href="#gia">Giá</a>
           <a href="#vi-tri">Vị trí</a>
         </nav>
@@ -47,13 +49,13 @@ export default function Home() {
         <figure className="hero-visual">
           <div className="image-frame">
             <div
-              className="reference-image"
+              className="hero-photo"
               aria-hidden="true"
             />
           </div>
           <figcaption>
-            <span>Ảnh tham khảo phong cách</span>
-            <span>Sẽ thay bằng bộ ảnh gốc</span>
+            <span>Long Cốc Recycling Home</span>
+            <span>Đồi chè Long Cốc</span>
           </figcaption>
           <span className="visual-stamp" aria-hidden="true">SỐNG<br />LẠI</span>
         </figure>
@@ -71,12 +73,10 @@ export default function Home() {
           <h2 id="story-title">Một ngôi nhà có nhiều hơn một vòng đời.</h2>
           <div className="story-copy">
             <p className="story-lead">
-              Long Cốc Recycling Home được định hướng như một nơi nghỉ nhỏ giữa vùng đồi chè,
-              nơi vật liệu cũ được trao thêm công năng và mỗi chi tiết đều gợi nhắc về sự sống tiếp nối.
+              Một nơi để những vật liệu cũ được trao thêm công năng — và một chuyến đi được trao thêm nhiều khoảng thở.
             </p>
             <p>
-              Câu chuyện vật liệu, kiến trúc và trải nghiệm thực tế sẽ được bổ sung sau khi chủ nhà
-              xác nhận — để website kể đúng, không kể quá.
+              Giữa đồi chè Long Cốc, những chai lọ, cánh cửa cũ và mảng vật liệu từng bị bỏ quên được ghép lại thành một không gian có ký ức.
             </p>
             <p className="story-note">Tái sử dụng · Sống chậm · Gần thiên nhiên</p>
           </div>
@@ -119,9 +119,58 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="experiences-section section-pad" id="trai-nghiem" aria-labelledby="experiences-title">
+        <div className="experience-heading">
+          <p className="section-index">03 · Những lát cắt ở Long Cốc</p>
+          <h2 id="experiences-title">Đi chậm lại,<br /><em>thấy nhiều hơn.</em></h2>
+        </div>
+        <div className="experience-grid">
+          <article className="experience-card experience-card-tall">
+            <div className="experience-image experience-image-materials" aria-hidden="true" />
+            <div className="experience-card-copy">
+              <p>01 · Vòng đời mới</p>
+              <h3>Từ vật liệu cũ đến những góc đầy màu sắc.</h3>
+              <span>Đọc câu chuyện tái chế</span>
+            </div>
+          </article>
+          <article className="experience-card">
+            <div className="experience-image experience-image-stream" aria-hidden="true" />
+            <div className="experience-card-copy">
+              <p>02 · Giữa thiên nhiên</p>
+              <h3>Nghe nước chảy, nghe rừng thở.</h3>
+              <span>Những ngày nghỉ thật chậm</span>
+            </div>
+          </article>
+          <article className="experience-card experience-card-accent">
+            <div className="experience-image experience-image-reborn" aria-hidden="true" />
+            <div className="experience-card-copy">
+              <p>03 · Những bông hoa không héo</p>
+              <h3>Khi điều tưởng như bỏ đi lại kể một câu chuyện khác.</h3>
+              <span>Khám phá không gian</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
+        <div className="food-main-image" aria-hidden="true" />
+        <div className="food-copy">
+          <p className="section-index section-index-light">04 · Ẩm thực</p>
+          <h2 id="food-title">Một bữa ăn,<br /><em>một chiều chậm.</em></h2>
+          <p>
+            Thực đơn tại Long Cốc là một phần của chuyến đi: những món ăn và đồ uống để bạn ngồi lâu hơn, trò chuyện nhiều hơn, ngắm màu chè đổi theo nắng.
+          </p>
+          <div className="menu-previews" aria-label="Ảnh thực đơn Long Cốc">
+            <div className="menu-preview menu-preview-one" aria-label="Trang thực đơn thứ nhất" />
+            <div className="menu-preview menu-preview-two" aria-label="Trang thực đơn thứ hai" />
+          </div>
+          <p className="food-note">Thực đơn chi tiết và giá sẽ được cập nhật cùng tài liệu chính thức.</p>
+        </div>
+      </section>
+
       <section className="pricing-section section-pad" id="gia" aria-labelledby="pricing-title">
         <div className="pricing-heading">
-          <p className="section-index section-index-light">03 · Giá phòng</p>
+          <p className="section-index section-index-light">05 · Giá phòng</p>
           <h2 id="pricing-title">Rõ ràng trước<br />khi bạn lên đường.</h2>
         </div>
         <ul className="price-table" aria-label="Các nhóm giá đang chờ cập nhật">
@@ -134,7 +183,7 @@ export default function Home() {
 
       <section className="location-section section-pad" id="vi-tri" aria-labelledby="location-title">
         <div className="location-copy">
-          <p className="section-index">04 · Vị trí</p>
+          <p className="section-index">06 · Vị trí</p>
           <h2 id="location-title">Tìm về vùng đồi chè Long Cốc.</h2>
           <p>
             Bản đồ hiện hiển thị khu vực đồi chè Long Cốc để định hướng. Điểm ghim chính xác và hướng dẫn đường vào homestay sẽ được cập nhật khi địa chỉ được xác nhận.
@@ -156,7 +205,7 @@ export default function Home() {
 
       <section className="booking-section section-pad" id="dat-phong" aria-labelledby="booking-title">
         <div className="booking-heading">
-          <p className="section-index">05 · Đặt phòng</p>
+          <p className="section-index">07 · Đặt phòng</p>
           <h2 id="booking-title">Bạn chọn ngày.<br /><em>Chúng tôi chuẩn bị trà.</em></h2>
           <p>Hãy tạo một bản yêu cầu để kiểm tra nội dung trước. Website chưa gửi dữ liệu đi đâu cho tới khi kênh liên hệ chính thức được kết nối.</p>
         </div>

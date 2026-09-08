@@ -46,9 +46,15 @@ export default defineConfig(async () => {
 
   return {
     css: { postcss: { plugins: [tailwindcss()] } },
-    server: isCodexSeatbeltSandbox
-      ? { watch: { useFsEvents: false, usePolling: true } }
-      : undefined,
+    server: {
+      // Original photos are kept in src for editorial work. The site serves the
+      // selected copies from public/images, so Vite does not need to watch the
+      // photo archive during development.
+      watch: {
+        ignored: ['**/src/**'],
+        ...(isCodexSeatbeltSandbox ? { useFsEvents: false, usePolling: true } : {}),
+      },
+    },
     plugins: [
       vinext(),
       sites(),
