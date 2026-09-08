@@ -619,7 +619,7 @@ a {
 
 /* Long Cốc landing sections */
 .section-pad { padding: clamp(3.25rem, 5vw, 4.75rem) max(1.25rem, calc((100vw - 72rem) / 2)); }
-.section-index { margin: 0 0 1.2rem; color: var(--tea-green); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.section-index { margin: 0 0 1.2rem; color: var(--tea-green); font-size: clamp(.95rem, 1.3vw, 1.15rem); font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .story-section { background: var(--paper); }
 .story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { max-width: 13ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.35rem, 4.5vw, 4.75rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
