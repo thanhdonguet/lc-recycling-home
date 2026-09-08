@@ -267,8 +267,8 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <div className="footer-brand"><span className="brand-mark" aria-hidden="true">LC</span><strong>Long Cốc<br />Recycling Home</strong></div>
-        <p>Homestay tái chế · Vùng đồi chè Long Cốc</p>
+        <div className="footer-brand"><span className="footer-logo" aria-hidden="true" /><strong>Long Cốc<br />Recycling Home</strong></div>
+        <p>© Long Cốc Recycling Home · Tác giả: <a href="https://fb.com/thanhdonguet" target="_blank" rel="noreferrer">fb.com/thanhdonguet</a></p>
         <div className="footer-contact">
           <a href="https://www.facebook.com/profile.php?id=61590562556980" target="_blank" rel="noreferrer">Facebook Long Cốc</a>
           <a href="https://zalo.me/0388005474" target="_blank" rel="noreferrer">Zalo: 0388 005 474</a>
