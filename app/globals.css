@@ -679,7 +679,7 @@ a {
 .experience-card-copy span { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: #526a58; font-size: .86rem; }
 .experience-card-copy b { display: grid; width: 2rem; height: 2rem; flex: 0 0 auto; place-items: center; border: 1px solid #acc2a5; border-radius: 50%; color: var(--tea-green); font-size: 1.2rem; font-weight: 400; transition: transform 180ms ease; }
 .story-dialog { position: fixed; z-index: 100; inset: 0; display: grid; width: 100vw; height: 100vh; max-width: none; max-height: none; place-items: center; border: 0; padding: clamp(1rem, 4vw, 3rem); background: rgb(5 25 14 / 86%); }
-.story-dialog-content { position: relative; width: min(100%, 47rem); max-height: 86vh; overflow-y: auto; border: 1px solid rgb(245 200 76 / 38%); border-radius: 1rem; background: var(--paper); padding: clamp(2rem, 5vw, 4rem); box-shadow: 0 2rem 5rem rgb(0 0 0 / 40%); }
+.story-dialog-content { position: relative; z-index: 1; width: min(100%, 47rem); max-height: 86vh; overflow-y: auto; border: 1px solid rgb(245 200 76 / 38%); border-radius: 1rem; background: var(--paper); padding: clamp(2rem, 5vw, 4rem); box-shadow: 0 2rem 5rem rgb(0 0 0 / 40%); }
 .story-dialog-close { position: sticky; z-index: 1; top: 0; float: right; display: grid; width: 2.6rem; height: 2.6rem; place-items: center; border: 1px solid #acc2a5; border-radius: 50%; background: var(--paper); color: var(--tea-green-deep); font-size: 2rem; font-weight: 300; line-height: 1; cursor: pointer; }
 .story-dialog-number { margin: 0 0 1rem; color: var(--tea-green); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .story-dialog h2 { max-width: 16ch; margin: 0 0 2rem; color: var(--tea-green-deep); font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 500; line-height: 1.05; }
@@ -724,7 +724,8 @@ a {
 .image-link:hover::after, .image-link:focus-visible::after { opacity: 1; }
 .image-link:focus-visible { outline: 3px solid var(--tea-yellow); outline-offset: 4px; }
 .image-lightbox { position: fixed; z-index: 100; inset: 0; display: grid; width: 100vw; height: 100vh; max-width: none; max-height: none; place-items: center; padding: clamp(1rem, 4vw, 3rem); border: 0; background: rgb(5 25 14 / 88%); }
-.image-lightbox-content { position: relative; max-width: min(92vw, 75rem); max-height: 90vh; cursor: default; }
+.dialog-backdrop { position: absolute; z-index: 0; inset: 0; border: 0; background: transparent; cursor: default; }
+.image-lightbox-content { position: relative; z-index: 1; max-width: min(92vw, 75rem); max-height: 90vh; cursor: default; }
 .image-lightbox-image { display: block; width: auto; max-width: min(92vw, 75rem); height: auto; max-height: min(82vh, 52rem); border: 2px solid rgb(255 255 255 / 72%); border-radius: .75rem; object-fit: contain; box-shadow: 0 2rem 5rem rgb(0 0 0 / 42%); }
 .image-lightbox-close { position: absolute; z-index: 1; top: .75rem; right: .75rem; display: grid; width: 2.7rem; height: 2.7rem; place-items: center; border: 1px solid rgb(255 255 255 / 50%); border-radius: 50%; background: rgb(10 42 24 / 85%); color: white; font-size: 2rem; font-weight: 300; line-height: 1; cursor: pointer; }
 .image-lightbox-close:focus-visible { outline: 3px solid var(--tea-yellow); outline-offset: 3px; }

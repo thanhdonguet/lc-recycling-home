@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 type StoryDialogProps = {
   caption: string;
@@ -28,8 +29,9 @@ export function StoryDialog({ caption, kicker, number, title }: StoryDialogProps
         <h3>{title}</h3>
         <span>Đọc câu chuyện <b aria-hidden="true">↗</b></span>
       </button>
-      {isOpen && (
+      {isOpen && createPortal(
         <dialog open className="story-dialog" aria-label={title}>
+          <button type="button" className="dialog-backdrop" onClick={() => setIsOpen(false)} aria-label="Đóng câu chuyện" />
           <article className="story-dialog-content">
             <button type="button" className="story-dialog-close" onClick={() => setIsOpen(false)} aria-label="Đóng câu chuyện">×</button>
             <p className="story-dialog-number">{number} · {kicker}</p>
@@ -38,7 +40,8 @@ export function StoryDialog({ caption, kicker, number, title }: StoryDialogProps
               {caption.trim().split(/\n\s*\n/).map((paragraph, index) => <p key={`${index}-${paragraph.slice(0, 20)}`}>{paragraph}</p>)}
             </div>
           </article>
-        </dialog>
+        </dialog>,
+        document.body,
       )}
     </>
   );
