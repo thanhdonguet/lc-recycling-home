@@ -225,20 +225,20 @@ export default function Home() {
           <p className="section-index">06 · Vị trí</p>
           <h2 id="location-title">Tìm về vùng đồi chè Long Cốc.</h2>
           <p>
-            Bản đồ hiện hiển thị khu vực đồi chè Long Cốc để định hướng. Điểm ghim chính xác và hướng dẫn đường vào homestay sẽ được cập nhật khi địa chỉ được xác nhận.
+            Mở bản đồ để nhận chỉ đường trực tiếp đến Long Cốc Recycling Home.
           </p>
-          <a className="location-link" href="https://www.google.com/maps/search/?api=1&query=%C4%90%E1%BB%93i+ch%C3%A8+Long+C%E1%BB%91c" target="_blank" rel="noreferrer">
-            Mở khu vực trên Google Maps <span aria-hidden="true">↗</span>
+          <a className="location-link" href="https://maps.app.goo.gl/QLFe5JZVfRAG4nDJ6?g_st=ac" target="_blank" rel="noreferrer">
+            Mở chỉ đường trên Google Maps <span aria-hidden="true">↗</span>
           </a>
         </div>
         <div className="map-frame">
           <iframe
-            title="Bản đồ khu vực đồi chè Long Cốc"
-            src="https://www.google.com/maps?q=%C4%90%E1%BB%93i+ch%C3%A8+Long+C%E1%BB%91c&output=embed"
+            title="Bản đồ Long Cốc Recycling Home"
+            src="https://www.google.com/maps?q=Long+Coc+Recycling+Home,+B%C3%B4ng,+2,+Long+C%E1%BB%91c,+Ph%C3%BA+Th%E1%BB%8D+290000&output=embed"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
-          <p>Điểm tham chiếu khu vực — chưa phải vị trí chính xác của homestay.</p>
+          <p>Điểm ghim Long Cốc Recycling Home.</p>
         </div>
       </section>
 
@@ -246,7 +246,7 @@ export default function Home() {
         <div className="booking-heading">
           <p className="section-index">07 · Đặt phòng</p>
           <h2 id="booking-title">Bạn chọn ngày.<br /><em>Chúng tôi chuẩn bị trà.</em></h2>
-          <p>Hãy tạo một bản yêu cầu để kiểm tra nội dung trước. Website chưa gửi dữ liệu đi đâu cho tới khi kênh liên hệ chính thức được kết nối.</p>
+          <p>Gửi yêu cầu để Long Cốc kiểm tra phòng trống và chuẩn bị cho chuyến nghỉ của bạn.</p>
         </div>
         <BookingForm />
       </section>
@@ -254,7 +254,11 @@ export default function Home() {
       <footer className="site-footer">
         <div className="footer-brand"><span className="brand-mark" aria-hidden="true">LC</span><strong>Long Cốc<br />Recycling Home</strong></div>
         <p>Homestay tái chế · Vùng đồi chè Long Cốc</p>
-        <p className="footer-meta">Liên hệ · Đang cập nhật</p>
+        <div className="footer-contact">
+          <a href="https://www.facebook.com/profile.php?id=61590562556980" target="_blank" rel="noreferrer">Facebook Long Cốc</a>
+          <a href="https://zalo.me/0388005474" target="_blank" rel="noreferrer">Zalo: 0388 005 474</a>
+          <a href="tel:0388005474">Gọi: 0388 005 474</a>
+        </div>
       </footer>
     </main>
   );

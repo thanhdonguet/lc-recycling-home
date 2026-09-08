@@ -672,7 +672,7 @@ a {
 .experience-caption p { margin: 0 0 1rem; white-space: pre-line; }
 
 .food-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(20rem, .88fr); gap: clamp(2rem, 7vw, 7rem); align-items: stretch; background: var(--tea-green-deep); color: white; }
-.food-main-image { display: block; min-height: 39rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
+.food-main-image { display: block; min-height: 33rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
 .food-copy { display: flex; flex-direction: column; justify-content: center; }
 .food-copy h2 { margin: 0 0 1.6rem; font-family: var(--font-display); font-size: clamp(2.8rem, 4.8vw, 5.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .food-copy h2 em { color: var(--tea-yellow); font-weight: 400; }
@@ -745,7 +745,8 @@ a {
 .site-footer { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: end; background: var(--tea-green-deep); padding: 3rem clamp(1.25rem, 6vw, 6rem); color: white; }
 .footer-brand { display: flex; align-items: center; gap: .8rem; font-size: .85rem; line-height: 1.1; }
 .site-footer > p { margin: 0; color: rgb(255 255 255 / 64%); font-size: .8rem; }
-.footer-meta { justify-self: end; }
+.footer-contact { display: flex; flex-wrap: wrap; justify-content: end; gap: .65rem 1.15rem; color: rgb(255 255 255 / 78%); font-size: .85rem; }
+.footer-contact a { border-bottom: 1px solid rgb(255 255 255 / 38%); padding-bottom: .2rem; }
 
 @media (max-width: 900px) {
   .story-grid, .pricing-section, .location-section, .booking-shell, .food-section { grid-template-columns: 1fr; }
@@ -758,7 +759,7 @@ a {
   .experience-grid { grid-template-columns: 1fr 1fr; }
   .experience-card-tall { grid-row: span 2; margin-bottom: 0; }
   .experience-card-accent { margin-bottom: 0; }
-  .food-main-image { min-height: 29rem; max-width: 48rem; }
+  .food-main-image { min-height: 26rem; max-width: 48rem; }
   .map-frame { border-radius: 5rem 1rem 1rem; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p:nth-child(2) { display: none; }
@@ -777,11 +778,11 @@ a {
   .experience-card-tall { grid-row: auto; }
   .experience-card-tall .experience-image, .experience-image { min-height: 19rem; }
   .experience-card-copy { min-height: auto; }
-  .food-main-image { min-height: 23rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
+  .food-main-image { min-height: 21rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
   .food-gallery { grid-template-rows: 5.5rem 5.5rem; }
   .menu-preview { width: 9rem; height: 12.8rem; }
   .form-row, .form-row:has(.form-field-small) { grid-template-columns: 1fr; }
   .preview-kicker { margin-bottom: 2.5rem; }
   .site-footer { grid-template-columns: 1fr; align-items: start; }
-  .footer-meta { justify-self: start; }
+  .footer-contact { justify-content: start; }
 }
