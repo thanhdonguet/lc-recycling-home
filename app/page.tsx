@@ -5,11 +5,9 @@ import blog2Caption from '../src/blogs/blog2/blog2.txt?raw';
 import blog3Caption from '../src/blogs/blog3/blog3.txt?raw';
 
 const galleryImages = [
-  'bigpicture/DSCF4533.jpg', 'bigpicture/DSCF4536.jpg',
   'blogs/blog1/791738544_122135353383352085_6547678781794261905_n.jpg', 'blogs/blog1/791738544_122135354385352085_6679969267739404664_n.jpg', 'blogs/blog1/791890187_122135354067352085_2320784067566839605_n.jpg', 'blogs/blog1/791996883_122135354763352085_6835726384657420363_n.jpg', 'blogs/blog1/792091171_122135355099352085_5796572665175687647_n.jpg', 'blogs/blog1/792506782_122135354481352085_4656047890465365277_n.jpg', 'blogs/blog1/792506786_122135353341352085_8685687830757324677_n.jpg', 'blogs/blog1/792766687_122135353647352085_4780492960323049505_n.jpg', 'blogs/blog1/792915460_122135354019352085_4570101446555961538_n.jpg', 'blogs/blog1/793002147_122135353965352085_537530233104752117_n.jpg', 'blogs/blog1/793002160_122135354259352085_370011358849754404_n.jpg', 'blogs/blog1/793245570_122135353911352085_4462698375335025166_n.jpg', 'blogs/blog1/794096104_122135353293352085_3917906467708614974_n.jpg', 'blogs/blog1/796332340_122135353461352085_2630398348386934461_n.jpg',
   'blogs/blog2/792766684_122135591589352085_235097256750071410_n.jpg', 'blogs/blog2/792915448_122135591919352085_2151498709929845204_n.jpg', 'blogs/blog2/793002157_122135591319352085_5271370120441148065_n.jpg', 'blogs/blog2/793245567_122135591427352085_2080649044069938867_n.jpg', 'blogs/blog2/793245575_122135591835352085_778742561166222446_n.jpg', 'blogs/blog2/794144776_122135591373352085_1345928345854646588_n.jpg', 'blogs/blog2/798743939_122135591469352085_2855742433634961013_n.jpg',
   'blogs/blog3/792705582_122135975319352085_5755501330749458011_n.jpg', 'blogs/blog3/794725595_122135975499352085_2128921241564406758_n.jpg', 'blogs/blog3/795235453_122135975403352085_8943296675818765867_n.jpg', 'blogs/blog3/798080180_122135975673352085_3789682076064929711_n.jpg', 'blogs/blog3/798215738_122135975721352085_7348984584942084897_n.jpg', 'blogs/blog3/799085903_122135975361352085_7770822083023284784_n.jpg',
-  'menus/paper menu 1.jpg', 'menus/paper menu 2.jpg', 'menus/real meal.jpg', 'menus/real meal 2.jpg', 'menus/real meal 3.jpg', 'menus/real meal 4.jpg', 'menus/real meal 5.jpg', 'menus/real meal 6.jpg',
 ];
 
 export default function Home() {
@@ -171,15 +169,18 @@ export default function Home() {
         <div className="gallery-heading">
           <p className="section-index">04 · Gallery</p>
           <h2 id="gallery-title">Những khoảnh khắc<br /><em>ở Long Cốc.</em></h2>
-          <p>Toàn bộ ảnh từ không gian, câu chuyện và những bữa ăn tại Long Cốc.</p>
+          <p>27 ảnh được chọn từ những câu chuyện của Long Cốc.</p>
         </div>
-        <div className="gallery-grid" aria-label="Thư viện ảnh Long Cốc">
-          {galleryImages.map((image) => (
-            <figure className="gallery-item" key={image}>
-              <div style={{ backgroundImage: `url("/images/gallery/${image}")` }} aria-hidden="true" />
-            </figure>
-          ))}
-        </div>
+        <details className="gallery-disclosure">
+          <summary><span>Xem 27 ảnh trong Gallery</span><b aria-hidden="true">+</b></summary>
+          <div className="gallery-grid" aria-label="Thư viện ảnh blog Long Cốc">
+            {galleryImages.map((image) => (
+              <figure className="gallery-item" key={image}>
+                <div style={{ backgroundImage: `url("/images/gallery/${image}")` }} aria-hidden="true" />
+              </figure>
+            ))}
+          </div>
+        </details>
       </section>
 
       <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
