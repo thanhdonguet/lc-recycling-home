@@ -211,6 +211,22 @@ a {
   font-weight: 800;
 }
 
+.brand-logo {
+  width: 4.5rem;
+  height: 4.5rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: center / cover no-repeat url('/images/long-coc/logo.png');
+  box-shadow: 0 0.45rem 1.1rem rgb(0 0 0 / 18%);
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
 .desktop-nav {
   display: flex;
   gap: clamp(0.3rem, 1vw, 0.8rem);
@@ -454,25 +470,6 @@ a {
   text-transform: uppercase;
 }
 
-.visual-stamp {
-  position: absolute;
-  right: clamp(0.65rem, 2.3vw, 2.2rem);
-  bottom: 7rem;
-  display: grid;
-  width: 5.3rem;
-  height: 5.3rem;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--tea-yellow);
-  color: var(--tea-green-deep);
-  font-family: var(--font-display);
-  font-size: 0.92rem;
-  font-weight: 800;
-  line-height: 0.95;
-  text-align: center;
-  transform: rotate(7deg);
-}
-
 .intro-strip {
   display: flex;
   min-height: 6rem;
@@ -562,10 +559,6 @@ a {
     min-height: 24rem;
   }
 
-  .visual-stamp {
-    right: 0.9rem;
-    bottom: 7.2rem;
-  }
 }
 
 @media (max-width: 560px) {
@@ -574,8 +567,13 @@ a {
   }
 
   .brand-name {
-    display: none;
+    display: inline;
+    font-size: 0.95rem;
   }
+
+  .brand-logo { width: 3.5rem; height: 3.5rem; }
+
+  .header-cta { min-height: 2.55rem; padding: 0 .75rem; font-size: .82rem; }
 
   .hero-copy {
     padding-top: 10.5rem;
@@ -688,6 +686,13 @@ a {
 .food-copy h2 { margin: 0 0 1.6rem; font-family: var(--font-display); font-size: clamp(2.8rem, 4.8vw, 5.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .food-copy h2 em { color: var(--tea-yellow); font-weight: 400; }
 .food-copy > p:not(.section-index, .food-note) { max-width: 34rem; margin: 0; color: rgb(255 255 255 / 72%); font-size: 1rem; line-height: 1.7; }
+.food-gallery { display: grid; grid-template-columns: 1.15fr .85fr .85fr; grid-template-rows: 6.5rem 6.5rem; gap: .55rem; margin: 2rem 0 0; }
+.food-gallery-image { overflow: hidden; border: 2px solid rgb(255 255 255 / 28%); border-radius: .75rem; background-position: center; background-size: cover; box-shadow: 0 .65rem 1.3rem rgb(0 0 0 / 14%); }
+.food-gallery-image-two { grid-row: span 2; background-image: url('/images/long-coc/meal-2.jpg'); }
+.food-gallery-image-three { background-image: url('/images/long-coc/meal-3.jpg'); }
+.food-gallery-image-four { background-image: url('/images/long-coc/meal-4.jpg'); }
+.food-gallery-image-five { background-image: url('/images/long-coc/meal-5.jpg'); }
+.food-gallery-image-six { background-image: url('/images/long-coc/meal-6.jpg'); }
 .menu-previews { display: flex; align-items: end; min-height: 13rem; margin: 2.2rem 0 1.2rem; }
 .menu-preview { width: 8.6rem; height: 12rem; border: 5px solid var(--paper); background-position: center; background-size: cover; box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%); }
 .menu-preview-one { z-index: 2; transform: rotate(-6deg); background-image: url('/images/long-coc/menu-1.jpg'); }
@@ -774,6 +779,7 @@ a {
   .journal-entry summary h3 { font-size: 1.5rem; }
   .journal-caption { padding: 0 0 1.6rem; font-size: 1rem; line-height: 1.72; }
   .food-main-image { min-height: 23rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
+  .food-gallery { grid-template-rows: 5.5rem 5.5rem; }
   .form-row, .form-row:has(.form-field-small) { grid-template-columns: 1fr; }
   .preview-kicker { margin-bottom: 2.5rem; }
   .site-footer { grid-template-columns: 1fr; align-items: start; }

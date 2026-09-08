@@ -18,7 +18,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Long Cốc Recycling Home">
-          <span className="brand-mark" aria-hidden="true">LC</span>
+          <span className="brand-logo" aria-hidden="true" />
           <span className="brand-name">Long Cốc<br />Recycling Home</span>
         </a>
 
@@ -75,7 +75,6 @@ export default function Home() {
             <span>Long Cốc Recycling Home</span>
             <span>Đồi chè Long Cốc</span>
           </figcaption>
-          <span className="visual-stamp" aria-hidden="true">SỐNG<br />LẠI</span>
         </figure>
       </section>
 
@@ -205,6 +204,13 @@ export default function Home() {
           <p>
             Thực đơn tại Long Cốc là một phần của chuyến đi: những món ăn và đồ uống để bạn ngồi lâu hơn, trò chuyện nhiều hơn, ngắm màu chè đổi theo nắng.
           </p>
+          <div className="food-gallery" aria-label="Một số món ăn tại Long Cốc">
+            <div className="food-gallery-image food-gallery-image-two" aria-hidden="true" />
+            <div className="food-gallery-image food-gallery-image-three" aria-hidden="true" />
+            <div className="food-gallery-image food-gallery-image-four" aria-hidden="true" />
+            <div className="food-gallery-image food-gallery-image-five" aria-hidden="true" />
+            <div className="food-gallery-image food-gallery-image-six" aria-hidden="true" />
+          </div>
           <div className="menu-previews" aria-label="Ảnh thực đơn Long Cốc">
             <div className="menu-preview menu-preview-one" aria-label="Trang thực đơn thứ nhất" />
             <div className="menu-preview menu-preview-two" aria-label="Trang thực đơn thứ hai" />
