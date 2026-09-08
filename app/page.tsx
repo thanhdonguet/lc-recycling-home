@@ -147,7 +147,7 @@ export default function Home() {
             <details className="experience-story">
               <summary className="experience-card-copy">
                 <p>01 · Vòng đời mới</p>
-                <h3>Những điều không hoàn hảo.</h3>
+                <h3>Vẻ đẹp của những điều được làm lại.</h3>
                 <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
               </summary>
               <div className="experience-caption">
@@ -185,7 +185,13 @@ export default function Home() {
       </section>
 
       <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
-        <div className="food-main-image" aria-hidden="true" />
+        <a
+          className="food-main-image image-link"
+          href="/images/long-coc/meal.jpg"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Xem ảnh món ăn tại Long Cốc kích thước lớn"
+        />
         <div className="food-copy">
           <p className="section-index section-index-light">04 · Ẩm thực</p>
           <h2 id="food-title">Một bữa ăn,<br /><em>một chiều chậm.</em></h2>
@@ -193,15 +199,15 @@ export default function Home() {
             Thực đơn tại Long Cốc là một phần của chuyến đi: những món ăn và đồ uống để bạn ngồi lâu hơn, trò chuyện nhiều hơn, ngắm màu chè đổi theo nắng.
           </p>
           <div className="food-gallery" aria-label="Một số món ăn tại Long Cốc">
-            <div className="food-gallery-image food-gallery-image-two" aria-hidden="true" />
-            <div className="food-gallery-image food-gallery-image-three" aria-hidden="true" />
-            <div className="food-gallery-image food-gallery-image-four" aria-hidden="true" />
-            <div className="food-gallery-image food-gallery-image-five" aria-hidden="true" />
-            <div className="food-gallery-image food-gallery-image-six" aria-hidden="true" />
+            <a className="food-gallery-image food-gallery-image-two image-link" href="/images/long-coc/meal-2.jpg" target="_blank" rel="noreferrer" aria-label="Xem ảnh món ăn 1 kích thước lớn" />
+            <a className="food-gallery-image food-gallery-image-three image-link" href="/images/long-coc/meal-3.jpg" target="_blank" rel="noreferrer" aria-label="Xem ảnh món ăn 2 kích thước lớn" />
+            <a className="food-gallery-image food-gallery-image-four image-link" href="/images/long-coc/meal-4.jpg" target="_blank" rel="noreferrer" aria-label="Xem ảnh món ăn 3 kích thước lớn" />
+            <a className="food-gallery-image food-gallery-image-five image-link" href="/images/long-coc/meal-5.jpg" target="_blank" rel="noreferrer" aria-label="Xem ảnh món ăn 4 kích thước lớn" />
+            <a className="food-gallery-image food-gallery-image-six image-link" href="/images/long-coc/meal-6.jpg" target="_blank" rel="noreferrer" aria-label="Xem ảnh món ăn 5 kích thước lớn" />
           </div>
           <div className="menu-previews" aria-label="Ảnh thực đơn Long Cốc">
-            <div className="menu-preview menu-preview-one" aria-label="Trang thực đơn thứ nhất" />
-            <div className="menu-preview menu-preview-two" aria-label="Trang thực đơn thứ hai" />
+            <a className="menu-preview menu-preview-one image-link" href="/images/long-coc/menu-1.jpg" target="_blank" rel="noreferrer" aria-label="Mở trang thực đơn thứ nhất" />
+            <a className="menu-preview menu-preview-two image-link" href="/images/long-coc/menu-2.jpg" target="_blank" rel="noreferrer" aria-label="Mở trang thực đơn thứ hai" />
           </div>
           <p className="food-note">Thực đơn chi tiết và giá sẽ được cập nhật cùng tài liệu chính thức.</p>
         </div>
