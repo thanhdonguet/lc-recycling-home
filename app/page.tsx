@@ -97,41 +97,13 @@ export default function Home() {
           <p className="section-index">02 · Không gian nghỉ</p>
           <h2 id="rooms-title">Mỗi căn phòng,<br /><em>một khoảng xanh riêng.</em></h2>
           <p className="section-intro">
-            Từ bungalow 35m² dành cho hai người đến nhà sàn cho đoàn đông — chọn một nhịp nghỉ hợp với chuyến đi của bạn. Tất cả giá đã bao gồm ăn sáng.
+            Một nơi để chọn nhịp nghỉ phù hợp, từ chuyến đi hai người đến những buổi gặp gỡ đông vui.
           </p>
         </div>
-
-        <div className="room-list">
-          <article className="room-card">
-            <div className="room-placeholder" aria-label="Thông tin Bungalow đồi chè">
-              <span>Bungalow · 35m²</span><strong>01</strong>
-            </div>
-            <div className="room-content">
-              <p className="room-number">01 / HẠNG PHÒNG</p>
-              <h3>Bungalow đồi chè</h3>
-              <p>10 căn, mỗi căn 35m². Căn 1–5 có 1 giường 2 × 2,2m; căn 6–10 có 2 giường 1,6 × 2m. Phù hợp cho 2 khách.</p>
-              <span className="room-status">1.200.000đ / 2 khách · đã giảm 20%</span>
-            </div>
-          </article>
-
-          <article className="room-card room-card-reverse">
-            <div className="room-placeholder room-placeholder-yellow" aria-label="Thông tin Nhà cọ">
-              <span>2 giường lớn</span><strong>02</strong>
-            </div>
-            <div className="room-content">
-              <p className="room-number">02 / HẠNG PHÒNG</p>
-              <h3>Khu nhà cọ</h3>
-              <p>Gồm Nhà cọ 1 và 2, mỗi căn có 2 giường 1,6 × 2m. Lựa chọn tiết kiệm, phù hợp nhóm nhỏ hoặc gia đình.</p>
-              <span className="room-status">640.000đ / 2 khách · đã giảm 20%</span>
-            </div>
-          </article>
+        <div className="rooms-callout">
+          <p>Thông tin hạng phòng, quy cách giường, sức chứa và giá ưu đãi được cập nhật tập trung tại bảng giá bên dưới để bạn dễ theo dõi.</p>
+          <a className="button button-primary" href="#gia">Xem hạng phòng &amp; giá <span aria-hidden="true">↓</span></a>
         </div>
-
-        <ul className="room-catalogue" aria-label="Các lựa chọn lưu trú khác">
-          <li><strong>Bungalow view hồ</strong><span>35m² · tiêu chuẩn 2 khách</span><em>1.280.000đ / 2 khách</em></li>
-          <li><strong>Khu nhà sàn đồi</strong><span>2 tầng · 120m² · tiêu chuẩn 10–12 khách</span><em>3.360.000đ / 10 khách</em></li>
-          <li><strong>Khu nhà sàn Ao</strong><span>250m² · tối đa 30 khách · tính giá theo giường</span><em>Từ 280.000đ / giường</em></li>
-        </ul>
       </section>
 
       <section className="experiences-section section-pad" id="trai-nghiem" aria-labelledby="experiences-title">

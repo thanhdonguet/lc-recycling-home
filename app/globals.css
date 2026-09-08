@@ -627,6 +627,8 @@ a {
 .section-heading .section-index { align-self: start; }
 .section-heading h2 em, .booking-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
 .section-intro { max-width: 27rem; margin: 0; color: #4d6656; line-height: 1.7; }
+.rooms-callout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; max-width: 58rem; border: 1px solid #c7d5bf; border-radius: 1rem; background: var(--paper); padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: 0 1rem 2.2rem rgb(11 61 36 / 7%); }
+.rooms-callout p { max-width: 37rem; margin: 0; color: #4d6656; font-size: 1.05rem; line-height: 1.7; }
 .room-list { display: grid; gap: clamp(4rem, 10vw, 9rem); }
 .room-card { display: grid; grid-template-columns: 1.35fr .65fr; gap: clamp(2rem, 7vw, 7rem); align-items: center; }
 .room-card-reverse .room-placeholder { order: 2; }
@@ -656,6 +658,7 @@ a {
 .experience-card-tall { margin-bottom: 3rem; }
 .experience-card-accent { margin-bottom: 1.2rem; }
 .experience-image { min-height: 18rem; background-position: center; background-size: cover; }
+.experience-image.image-link { width: 100%; }
 .experience-card-tall .experience-image { min-height: 27rem; }
 .experience-image-materials { background-image: url('/images/long-coc/story-materials.jpg'); }
 .experience-image-stream { background-image: url('/images/long-coc/story-stream.jpg'); }
@@ -759,6 +762,7 @@ a {
   .section-heading, .booking-heading { grid-template-columns: 1fr 1fr; }
   .section-heading .section-index, .booking-heading .section-index { grid-column: 1 / -1; margin-bottom: 0; }
   .room-card { grid-template-columns: 1fr; }
+  .rooms-callout { grid-template-columns: 1fr; justify-items: start; }
   .room-placeholder, .room-card-reverse .room-placeholder, .room-card-reverse .room-content { order: initial; }
   .room-content { max-width: 42rem; }
   .room-catalogue { grid-template-columns: 1fr; }
