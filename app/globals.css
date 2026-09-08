@@ -627,7 +627,9 @@ a {
 .section-heading .section-index { align-self: start; }
 .section-heading h2 em, .booking-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
 .section-intro { max-width: 27rem; margin: 0; color: #4d6656; line-height: 1.7; }
-.rooms-callout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; max-width: 58rem; border: 1px solid #c7d5bf; border-radius: 1rem; background: var(--paper); padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: 0 1rem 2.2rem rgb(11 61 36 / 7%); }
+.rooms-showcase { display: grid; grid-template-columns: minmax(18rem, .9fr) minmax(0, 1.1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: stretch; }
+.rooms-photo { min-height: 23rem; border-radius: 1rem 6rem 1rem 1rem; background: center / cover no-repeat url('/images/gallery/bigpicture/DSCF4536.jpg'); box-shadow: 1rem 1rem 0 rgb(245 200 76 / 72%); }
+.rooms-callout { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2rem; align-items: center; border: 1px solid #c7d5bf; border-radius: 1rem; background: var(--paper); padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: 0 1rem 2.2rem rgb(11 61 36 / 7%); }
 .rooms-callout p { max-width: 37rem; margin: 0; color: #4d6656; font-size: 1.05rem; line-height: 1.7; }
 .room-list { display: grid; gap: clamp(4rem, 10vw, 9rem); }
 .room-card { display: grid; grid-template-columns: 1.35fr .65fr; gap: clamp(2rem, 7vw, 7rem); align-items: center; }
@@ -673,6 +675,16 @@ a {
 .experience-story[open] .experience-card-copy b { transform: rotate(45deg); }
 .experience-caption { margin: 0 1.35rem; padding: 1.15rem 0 1.55rem; border-top: 1px solid #c8d8c1; color: #38533e; font-size: .95rem; line-height: 1.72; }
 .experience-caption p { margin: 0 0 1rem; white-space: pre-line; }
+
+.gallery-section { background: var(--paper); }
+.gallery-heading { display: grid; grid-template-columns: .7fr 1.3fr .8fr; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
+.gallery-heading h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+.gallery-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
+.gallery-heading > p:last-child { max-width: 22rem; margin: 0; color: #4d6656; line-height: 1.7; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; }
+.gallery-item { min-height: 13rem; margin: 0; overflow: hidden; border-radius: .8rem; background: #dcebd2; box-shadow: 0 .8rem 1.8rem rgb(11 61 36 / 8%); }
+.gallery-item:nth-child(7n + 1) { grid-row: span 2; min-height: 27rem; }
+.gallery-item > div { width: 100%; height: 100%; min-height: inherit; background: center / cover no-repeat; }
 
 .food-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(20rem, .88fr); gap: clamp(2rem, 7vw, 7rem); align-items: stretch; background: var(--tea-green-deep); color: white; }
 .food-main-image { display: block; min-height: 33rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
@@ -762,7 +774,11 @@ a {
   .section-heading, .booking-heading { grid-template-columns: 1fr 1fr; }
   .section-heading .section-index, .booking-heading .section-index { grid-column: 1 / -1; margin-bottom: 0; }
   .room-card { grid-template-columns: 1fr; }
+  .rooms-showcase { grid-template-columns: 1fr; max-width: 48rem; }
   .rooms-callout { grid-template-columns: 1fr; justify-items: start; }
+  .gallery-heading { grid-template-columns: 1fr 1fr; }
+  .gallery-heading .section-index { grid-column: 1 / -1; margin-bottom: 0; }
+  .gallery-heading > p:last-child { display: none; }
   .room-placeholder, .room-card-reverse .room-placeholder, .room-card-reverse .room-content { order: initial; }
   .room-content { max-width: 42rem; }
   .room-catalogue { grid-template-columns: 1fr; }
@@ -781,12 +797,17 @@ a {
   .room-placeholder { min-height: 25rem; border-radius: 1rem 5rem 1rem 1rem; }
   .room-placeholder-yellow { border-radius: 5rem 1rem 1rem; }
   .room-catalogue li { min-height: auto; }
+  .rooms-photo { min-height: 20rem; border-radius: 1rem 4.5rem 1rem 1rem; }
   .experience-heading { display: block; }
   .experience-heading .section-index { margin-bottom: 1.5rem; }
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card-tall { grid-row: auto; }
   .experience-card-tall .experience-image, .experience-image { min-height: 19rem; }
   .experience-card-copy { min-height: auto; }
+  .gallery-heading { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: .55rem; }
+  .gallery-item { min-height: 10rem; border-radius: .6rem; }
+  .gallery-item:nth-child(7n + 1) { min-height: 20.55rem; }
   .food-main-image { min-height: 21rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
   .food-gallery { grid-template-rows: 5.5rem 5.5rem; }
   .menu-preview { width: 9rem; height: 12.8rem; }
