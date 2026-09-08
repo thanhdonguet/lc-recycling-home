@@ -276,7 +276,7 @@ a {
 .hero {
   position: relative;
   display: grid;
-  min-height: 100svh;
+  min-height: 86svh;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   overflow: hidden;
   background:
@@ -302,10 +302,10 @@ a {
   position: relative;
   z-index: 2;
   display: flex;
-  max-width: 58rem;
+  max-width: 48rem;
   flex-direction: column;
   justify-content: center;
-  padding: 9rem clamp(1.2rem, 5vw, 6rem) 4rem;
+  padding: 7.5rem max(1.2rem, calc((100vw - 72rem) / 2)) 3rem;
 }
 
 .eyebrow {
@@ -330,7 +330,7 @@ a {
   max-width: 13ch;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(3.35rem, 7vw, 7.7rem);
+  font-size: clamp(3.1rem, 5.8vw, 6.2rem);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 0.88;
@@ -612,18 +612,18 @@ a {
 }
 
 /* Long Cốc landing sections */
-.section-pad { padding: clamp(5rem, 10vw, 9rem) clamp(1.25rem, 6vw, 6rem); }
-.section-index { margin: 0 0 2rem; color: var(--tea-green); font-size: .75rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+.section-pad { padding: clamp(3.25rem, 5vw, 4.75rem) max(1.25rem, calc((100vw - 72rem) / 2)); }
+.section-index { margin: 0 0 1.2rem; color: var(--tea-green); font-size: .72rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .story-section { background: var(--paper); }
-.story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem, 10vw, 10rem); align-items: start; }
-.story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { max-width: 13ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.8vw, 6.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
-.story-copy { max-width: 39rem; padding-top: .7rem; color: #425a49; font-size: 1rem; line-height: 1.75; }
-.story-copy p { margin: 0 0 1.5rem; }
+.story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { max-width: 13ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.35rem, 4.5vw, 4.75rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+.story-copy { max-width: 36rem; padding-top: .3rem; color: #425a49; font-size: .95rem; line-height: 1.65; }
+.story-copy p { margin: 0 0 1rem; }
 .story-copy .story-lead { color: var(--ink); font-family: var(--font-display); font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.45; }
 .story-note { border-top: 1px solid var(--border); padding-top: 1.25rem; color: var(--tea-green); font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 
 .rooms-section { background: var(--cream); }
-.section-heading { display: grid; grid-template-columns: .65fr 1.35fr .8fr; gap: 2rem; align-items: end; margin-bottom: clamp(4rem, 8vw, 8rem); }
+.section-heading { display: grid; grid-template-columns: .65fr 1.35fr .8fr; gap: 1.5rem; align-items: end; margin-bottom: clamp(2.2rem, 4vw, 3.5rem); }
 .section-heading .section-index { align-self: start; }
 .section-heading h2 em, .booking-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
 .section-intro { max-width: 27rem; margin: 0; color: #4d6656; line-height: 1.7; }
@@ -651,8 +651,8 @@ a {
 
 .experiences-section { position: relative; overflow: hidden; background: #dcebd2; }
 .experiences-section::before { content: ''; position: absolute; top: -18rem; right: -16rem; width: 38rem; height: 38rem; border-radius: 50%; background: rgb(245 200 76 / 40%); filter: blur(10px); }
-.experience-heading { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
-.experience-heading h2 { max-width: 12ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+.experience-heading { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 1.5rem; align-items: end; margin-bottom: clamp(2rem, 4vw, 3.5rem); }
+.experience-heading h2 { max-width: 12ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.35rem, 4.3vw, 4.75rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .experience-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
 .experience-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr .9fr; gap: clamp(1rem, 2.4vw, 2rem); align-items: end; }
 .experience-card { overflow: hidden; border: 1px solid rgb(11 61 36 / 14%); border-radius: 1.2rem; background: var(--paper); box-shadow: 0 1.4rem 2.6rem rgb(11 61 36 / 14%); transform: translateY(0); transition: transform 260ms ease, box-shadow 260ms ease; }
@@ -677,10 +677,9 @@ a {
 .experience-caption p { margin: 0 0 1rem; white-space: pre-line; }
 
 .gallery-section { background: var(--paper); padding-top: clamp(3.5rem, 7vw, 6rem); padding-bottom: clamp(3.5rem, 7vw, 6rem); }
-.gallery-heading { display: grid; grid-template-columns: .7fr 1.3fr .8fr; gap: 2rem; align-items: end; margin-bottom: clamp(1.5rem, 4vw, 3rem); }
+.gallery-heading { display: grid; grid-template-columns: .7fr 1.3fr; gap: 1.5rem; align-items: end; margin-bottom: clamp(1.25rem, 3vw, 2rem); }
 .gallery-heading h2 { margin: 0; font-family: var(--font-display); font-size: clamp(2.5rem, 4.5vw, 4.6rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .gallery-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
-.gallery-heading > p:last-child { max-width: 22rem; margin: 0; color: #4d6656; line-height: 1.7; }
 .gallery-disclosure { border: 1px solid #c7d5bf; border-radius: 1rem; background: #edf3e9; padding: 0 1.2rem; }
 .gallery-disclosure summary { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 4.5rem; cursor: pointer; list-style: none; color: var(--tea-green-deep); font-weight: 800; }
 .gallery-disclosure summary::-webkit-details-marker { display: none; }
@@ -689,23 +688,23 @@ a {
 .gallery-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: .6rem; padding: .2rem 0 1.2rem; }
 .gallery-item { min-height: 9rem; margin: 0; overflow: hidden; border-radius: .6rem; background: #dcebd2; }
 .gallery-item:nth-child(7n + 1) { grid-row: span 2; min-height: 18.6rem; }
-.gallery-item > div { width: 100%; height: 100%; min-height: inherit; background: center / cover no-repeat; }
+.gallery-image { display: block; width: 100%; height: 100%; min-height: inherit; border: 0; background: center / cover no-repeat; }
 
 .food-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(20rem, .88fr); gap: clamp(2rem, 7vw, 7rem); align-items: stretch; background: var(--tea-green-deep); color: white; }
-.food-main-image { display: block; min-height: 33rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
+.food-main-image { display: block; min-height: 27rem; border-radius: 1rem 6rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1rem 1rem 0 rgb(245 200 76 / 88%); }
 .food-copy { display: flex; flex-direction: column; justify-content: center; }
-.food-copy h2 { margin: 0 0 1.6rem; font-family: var(--font-display); font-size: clamp(2.8rem, 4.8vw, 5.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+.food-copy h2 { margin: 0 0 1.1rem; font-family: var(--font-display); font-size: clamp(2.35rem, 4.2vw, 4.5rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .food-copy h2 em { color: var(--tea-yellow); font-weight: 400; }
 .food-copy > p:not(.section-index, .food-note) { max-width: 34rem; margin: 0; color: rgb(255 255 255 / 72%); font-size: 1rem; line-height: 1.7; }
-.food-gallery { display: grid; grid-template-columns: 1.15fr .85fr .85fr; grid-template-rows: 6.5rem 6.5rem; gap: .55rem; margin: 2rem 0 0; }
+.food-gallery { display: grid; grid-template-columns: 1.15fr .85fr .85fr; grid-template-rows: 5.5rem 5.5rem; gap: .55rem; margin: 1.4rem 0 0; }
 .food-gallery-image { display: block; overflow: hidden; border: 2px solid rgb(255 255 255 / 28%); border-radius: .75rem; background-position: center; background-size: cover; box-shadow: 0 .65rem 1.3rem rgb(0 0 0 / 14%); }
 .food-gallery-image-two { grid-row: span 2; background-image: url('/images/long-coc/meal-2.jpg'); }
 .food-gallery-image-three { background-image: url('/images/long-coc/meal-3.jpg'); }
 .food-gallery-image-four { background-image: url('/images/long-coc/meal-4.jpg'); }
 .food-gallery-image-five { background-image: url('/images/long-coc/meal-5.jpg'); }
 .food-gallery-image-six { background-image: url('/images/long-coc/meal-6.jpg'); }
-.menu-previews { display: flex; align-items: end; min-height: 13rem; margin: 2.2rem 0 1.2rem; }
-.menu-preview { display: block; width: 12rem; height: 16.5rem; border: 5px solid var(--paper); background-position: center; background-size: cover; box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%); }
+.menu-previews { display: flex; align-items: end; min-height: 11rem; margin: 1.5rem 0 1rem; }
+.menu-preview { display: block; width: 10rem; height: 14rem; border: 4px solid var(--paper); background-position: center; background-size: cover; box-shadow: 0 1rem 2rem rgb(0 0 0 / 20%); }
 .menu-preview-one { z-index: 2; transform: rotate(-6deg); background-image: url('/images/long-coc/menu-1.jpg'); }
 .menu-preview-two { margin-left: -1.15rem; transform: rotate(6deg) translateY(.6rem); background-image: url('/images/long-coc/menu-2.jpg'); }
 .image-link { position: relative; padding: 0; color: inherit; font: inherit; cursor: zoom-in; transition: transform 180ms ease, filter 180ms ease; }
@@ -721,11 +720,11 @@ a {
 .image-lightbox-close:focus-visible { outline: 3px solid var(--tea-yellow); outline-offset: 3px; }
 .food-note { margin: 0; color: var(--tea-yellow-soft); font-size: .82rem; line-height: 1.55; }
 
-.pricing-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(3rem, 9vw, 9rem); background: var(--tea-green-deep); color: white; }
+.pricing-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem, 5vw, 4.5rem); background: var(--tea-green-deep); color: white; }
 .section-index-light { color: var(--tea-yellow); }
 .pricing-heading h2 { font-size: clamp(2.8rem, 5vw, 5.4rem); }
 .price-table { margin: 0; border-top: 1px solid rgb(255 255 255 / 28%); padding: 0; list-style: none; }
-.price-row { display: flex; justify-content: space-between; gap: 2rem; border-bottom: 1px solid rgb(255 255 255 / 20%); padding: 1.7rem 0; }
+.price-row { display: flex; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid rgb(255 255 255 / 20%); padding: 1.2rem 0; }
 .price-row > div:first-child { display: grid; gap: .4rem; }
 .price-row b { color: white; font-family: var(--font-display); font-size: clamp(1.25rem, 2.2vw, 1.7rem); font-weight: 600; }
 .price-row span { color: rgb(255 255 255 / 72%); line-height: 1.5; }
@@ -734,12 +733,12 @@ a {
 .price-values strong { color: var(--tea-yellow); font-weight: 700; }
 .price-note { max-width: 36rem; margin: 2rem 0 0; color: rgb(255 255 255 / 62%); font-size: .9rem; line-height: 1.65; }
 
-.location-section { display: grid; grid-template-columns: .68fr 1.32fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; background: var(--paper); }
-.location-copy h2 { margin-bottom: 1.8rem; font-size: clamp(2.7rem, 4.8vw, 5.2rem); }
+.location-section { display: grid; grid-template-columns: .68fr 1.32fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; background: var(--paper); }
+.location-copy h2 { margin-bottom: 1.1rem; font-size: clamp(2.35rem, 4.2vw, 4.5rem); }
 .location-copy > p:not(.section-index) { max-width: 34rem; color: #4d6656; line-height: 1.7; }
 .location-link { display: inline-flex; gap: .65rem; margin-top: 1rem; border-bottom: 1px solid var(--tea-green); padding-bottom: .4rem; color: var(--tea-green); font-weight: 800; }
 .map-frame { overflow: hidden; border: 1px solid var(--border); border-radius: 7rem 1rem 1rem; background: #e4ead9; }
-.map-frame iframe { display: block; width: 100%; height: clamp(27rem, 48vw, 40rem); border: 0; filter: saturate(.8) contrast(.95); }
+.map-frame iframe { display: block; width: 100%; height: clamp(21rem, 38vw, 31rem); border: 0; filter: saturate(.8) contrast(.95); }
 .map-frame p { margin: 0; background: var(--tea-yellow-soft); padding: .85rem 1.2rem; color: var(--tea-green-deep); font-size: .8rem; line-height: 1.4; }
 
 .booking-section { background: #e8eed8; }

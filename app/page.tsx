@@ -169,14 +169,13 @@ export default function Home() {
         <div className="gallery-heading">
           <p className="section-index">04 · Gallery</p>
           <h2 id="gallery-title">Những khoảnh khắc<br /><em>ở Long Cốc.</em></h2>
-          <p>27 ảnh được chọn từ những câu chuyện của Long Cốc.</p>
         </div>
         <details className="gallery-disclosure">
-          <summary><span>Xem 27 ảnh trong Gallery</span><b aria-hidden="true">+</b></summary>
+          <summary><span>Xem ảnh trong Gallery</span><b aria-hidden="true">+</b></summary>
           <div className="gallery-grid" aria-label="Thư viện ảnh blog Long Cốc">
             {galleryImages.map((image) => (
               <figure className="gallery-item" key={image}>
-                <div style={{ backgroundImage: `url("/images/gallery/${image}")` }} aria-hidden="true" />
+                <ImageLightbox className="gallery-image" src={`/images/gallery/${image}`} alt="Khoảnh khắc tại Long Cốc" style={{ backgroundImage: `url("/images/gallery/${image}")` }} />
               </figure>
             ))}
           </div>

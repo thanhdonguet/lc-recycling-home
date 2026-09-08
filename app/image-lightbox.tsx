@@ -1,14 +1,15 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type CSSProperties } from 'react';
 
 type ImageLightboxProps = {
   alt: string;
   className: string;
   src: string;
+  style?: CSSProperties;
 };
 
-export function ImageLightbox({ alt, className, src }: ImageLightboxProps) {
+export function ImageLightbox({ alt, className, src, style }: ImageLightboxProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -24,7 +25,7 @@ export function ImageLightbox({ alt, className, src }: ImageLightboxProps) {
 
   return (
     <>
-      <button type="button" className={`${className} image-link`} onClick={() => setIsOpen(true)} aria-label={`Xem ${alt} kích thước lớn`}>
+      <button type="button" className={`${className} image-link`} style={style} onClick={() => setIsOpen(true)} aria-label={`Xem ${alt} kích thước lớn`}>
       </button>
       {isOpen && (
         <dialog open className="image-lightbox" aria-label={alt}>
