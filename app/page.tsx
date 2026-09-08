@@ -3,12 +3,6 @@ import blog1Caption from '../src/blogs/blog1/blog1.txt?raw';
 import blog2Caption from '../src/blogs/blog2/blog2.txt?raw';
 import blog3Caption from '../src/blogs/blog3/blog3.txt?raw';
 
-const blogEntries = [
-  { number: '01', title: 'Những điều không hoàn hảo', caption: blog1Caption },
-  { number: '02', title: 'Dòng suối và bình yên', caption: blog2Caption },
-  { number: '03', title: 'Câu chuyện sống lại của rác', caption: blog3Caption },
-];
-
 export default function Home() {
   return (
     <main>
@@ -150,56 +144,50 @@ export default function Home() {
         <div className="experience-grid">
           <article className="experience-card experience-card-tall">
             <div className="experience-image experience-image-materials" aria-hidden="true" />
-            <div className="experience-card-copy">
-              <p>01 · Vòng đời mới</p>
-              <h3>Từ vật liệu cũ đến những góc đầy màu sắc.</h3>
-              <span>Đọc câu chuyện tái chế</span>
-            </div>
+            <details className="experience-story">
+              <summary className="experience-card-copy">
+                <p>01 · Vòng đời mới</p>
+                <h3>Những điều không hoàn hảo.</h3>
+                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
+              </summary>
+              <div className="experience-caption">
+                {blog1Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            </details>
           </article>
           <article className="experience-card">
             <div className="experience-image experience-image-stream" aria-hidden="true" />
-            <div className="experience-card-copy">
-              <p>02 · Giữa thiên nhiên</p>
-              <h3>Nghe nước chảy, nghe rừng thở.</h3>
-              <span>Những ngày nghỉ thật chậm</span>
-            </div>
+            <details className="experience-story">
+              <summary className="experience-card-copy">
+                <p>02 · Giữa thiên nhiên</p>
+                <h3>Dòng suối và bình yên.</h3>
+                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
+              </summary>
+              <div className="experience-caption">
+                {blog2Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            </details>
           </article>
           <article className="experience-card experience-card-accent">
             <div className="experience-image experience-image-reborn" aria-hidden="true" />
-            <div className="experience-card-copy">
-              <p>03 · Những bông hoa không héo</p>
-              <h3>Khi điều tưởng như bỏ đi lại kể một câu chuyện khác.</h3>
-              <span>Khám phá không gian</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section className="journal-section section-pad" aria-labelledby="journal-title">
-        <div className="journal-heading">
-          <p className="section-index">04 · Nhật ký Long Cốc</p>
-          <h2 id="journal-title">Những câu chuyện<br /><em>được viết từ nơi này.</em></h2>
-        </div>
-        <div className="journal-list">
-          {blogEntries.map((entry) => (
-            <details className="journal-entry" key={entry.number}>
-              <summary>
-                <span>{entry.number}</span>
-                <h3>{entry.title}</h3>
-                <b aria-hidden="true">+</b>
+            <details className="experience-story">
+              <summary className="experience-card-copy">
+                <p>03 · Những bông hoa không héo</p>
+                <h3>Câu chuyện sống lại của rác.</h3>
+                <span>Đọc caption đầy đủ <b aria-hidden="true">+</b></span>
               </summary>
-              <div className="journal-caption">
-                {entry.caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              <div className="experience-caption">
+                {blog3Caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
             </details>
-          ))}
+          </article>
         </div>
       </section>
 
       <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
         <div className="food-main-image" aria-hidden="true" />
         <div className="food-copy">
-          <p className="section-index section-index-light">05 · Ẩm thực</p>
+          <p className="section-index section-index-light">04 · Ẩm thực</p>
           <h2 id="food-title">Một bữa ăn,<br /><em>một chiều chậm.</em></h2>
           <p>
             Thực đơn tại Long Cốc là một phần của chuyến đi: những món ăn và đồ uống để bạn ngồi lâu hơn, trò chuyện nhiều hơn, ngắm màu chè đổi theo nắng.
@@ -221,7 +209,7 @@ export default function Home() {
 
       <section className="pricing-section section-pad" id="gia" aria-labelledby="pricing-title">
         <div className="pricing-heading">
-          <p className="section-index section-index-light">06 · Giá phòng</p>
+          <p className="section-index section-index-light">05 · Giá phòng</p>
           <h2 id="pricing-title">Rõ ràng trước<br />khi bạn lên đường.</h2>
         </div>
         <ul className="price-table" aria-label="Bảng giá phòng ưu đãi">
@@ -236,7 +224,7 @@ export default function Home() {
 
       <section className="location-section section-pad" id="vi-tri" aria-labelledby="location-title">
         <div className="location-copy">
-          <p className="section-index">07 · Vị trí</p>
+          <p className="section-index">06 · Vị trí</p>
           <h2 id="location-title">Tìm về vùng đồi chè Long Cốc.</h2>
           <p>
             Bản đồ hiện hiển thị khu vực đồi chè Long Cốc để định hướng. Điểm ghim chính xác và hướng dẫn đường vào homestay sẽ được cập nhật khi địa chỉ được xác nhận.
@@ -258,7 +246,7 @@ export default function Home() {
 
       <section className="booking-section section-pad" id="dat-phong" aria-labelledby="booking-title">
         <div className="booking-heading">
-          <p className="section-index">08 · Đặt phòng</p>
+          <p className="section-index">07 · Đặt phòng</p>
           <h2 id="booking-title">Bạn chọn ngày.<br /><em>Chúng tôi chuẩn bị trà.</em></h2>
           <p>Hãy tạo một bản yêu cầu để kiểm tra nội dung trước. Website chưa gửi dữ liệu đi đâu cho tới khi kênh liên hệ chính thức được kết nối.</p>
         </div>

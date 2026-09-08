@@ -663,22 +663,13 @@ a {
 .experience-card-copy { min-height: 14rem; padding: 1.35rem 1.35rem 1.55rem; }
 .experience-card-copy p { margin: 0 0 .85rem; color: var(--tea-green); font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .experience-card-copy h3 { margin: 0 0 1.5rem; font-family: var(--font-display); font-size: clamp(1.55rem, 2.1vw, 2.25rem); font-weight: 400; line-height: 1.05; }
-.experience-card-copy span { color: #526a58; font-size: .86rem; }
-
-.journal-section { background: var(--paper); }
-.journal-heading { display: grid; grid-template-columns: .65fr 1.35fr; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
-.journal-heading h2 { max-width: 15ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
-.journal-heading h2 em { color: var(--tea-green-bright); font-weight: 600; }
-.journal-list { border-top: 1px solid #bfd0ba; }
-.journal-entry { border-bottom: 1px solid #bfd0ba; }
-.journal-entry summary { display: grid; grid-template-columns: 4rem minmax(0, 1fr) auto; align-items: center; gap: 1.25rem; cursor: pointer; list-style: none; padding: 1.4rem 0; }
-.journal-entry summary::-webkit-details-marker { display: none; }
-.journal-entry summary span { color: var(--tea-green); font-size: .8rem; font-weight: 800; letter-spacing: .1em; }
-.journal-entry summary h3 { margin: 0; font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2.5rem); font-weight: 600; line-height: 1.15; }
-.journal-entry summary b { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid #acc2a5; border-radius: 50%; color: var(--tea-green); font-size: 1.35rem; font-weight: 400; transition: transform 180ms ease; }
-.journal-entry[open] summary b { transform: rotate(45deg); }
-.journal-caption { max-width: 54rem; padding: 0 0 2rem 5.25rem; color: #38533e; font-size: 1rem; line-height: 1.78; }
-.journal-caption p { white-space: pre-line; margin: 0 0 1.2rem; }
+.experience-story summary { cursor: pointer; list-style: none; }
+.experience-story summary::-webkit-details-marker { display: none; }
+.experience-card-copy span { display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: #526a58; font-size: .86rem; }
+.experience-card-copy b { display: grid; width: 2rem; height: 2rem; flex: 0 0 auto; place-items: center; border: 1px solid #acc2a5; border-radius: 50%; color: var(--tea-green); font-size: 1.2rem; font-weight: 400; transition: transform 180ms ease; }
+.experience-story[open] .experience-card-copy b { transform: rotate(45deg); }
+.experience-caption { margin: 0 1.35rem; padding: 1.15rem 0 1.55rem; border-top: 1px solid #c8d8c1; color: #38533e; font-size: .95rem; line-height: 1.72; }
+.experience-caption p { margin: 0 0 1rem; white-space: pre-line; }
 
 .food-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(20rem, .88fr); gap: clamp(2rem, 7vw, 7rem); align-items: stretch; background: var(--tea-green-deep); color: white; }
 .food-main-image { min-height: 39rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
@@ -757,7 +748,6 @@ a {
   .experience-card-tall { grid-row: span 2; margin-bottom: 0; }
   .experience-card-accent { margin-bottom: 0; }
   .food-main-image { min-height: 29rem; max-width: 48rem; }
-  .journal-heading { grid-template-columns: 1fr; }
   .map-frame { border-radius: 5rem 1rem 1rem; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p:nth-child(2) { display: none; }
@@ -775,9 +765,7 @@ a {
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card-tall { grid-row: auto; }
   .experience-card-tall .experience-image, .experience-image { min-height: 19rem; }
-  .journal-entry summary { grid-template-columns: 2.25rem minmax(0, 1fr) auto; gap: .75rem; padding: 1.1rem 0; }
-  .journal-entry summary h3 { font-size: 1.5rem; }
-  .journal-caption { padding: 0 0 1.6rem; font-size: 1rem; line-height: 1.72; }
+  .experience-card-copy { min-height: auto; }
   .food-main-image { min-height: 23rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
   .food-gallery { grid-template-rows: 5.5rem 5.5rem; }
   .form-row, .form-row:has(.form-field-small) { grid-template-columns: 1fr; }
