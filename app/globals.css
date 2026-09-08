@@ -706,8 +706,12 @@ a {
 .pricing-heading h2 { font-size: clamp(2.8rem, 5vw, 5.4rem); }
 .price-table { margin: 0; border-top: 1px solid rgb(255 255 255 / 28%); padding: 0; list-style: none; }
 .price-row { display: flex; justify-content: space-between; gap: 2rem; border-bottom: 1px solid rgb(255 255 255 / 20%); padding: 1.7rem 0; }
-.price-row span { color: rgb(255 255 255 / 72%); }
-.price-row strong { color: var(--tea-yellow); font-weight: 700; }
+.price-row > div:first-child { display: grid; gap: .4rem; }
+.price-row b { color: white; font-family: var(--font-display); font-size: clamp(1.25rem, 2.2vw, 1.7rem); font-weight: 600; }
+.price-row span { color: rgb(255 255 255 / 72%); line-height: 1.5; }
+.price-values { display: grid; align-content: center; justify-items: end; gap: .35rem; text-align: right; }
+.price-values del { color: rgb(255 255 255 / 48%); font-size: .78rem; }
+.price-values strong { color: var(--tea-yellow); font-weight: 700; }
 .price-note { max-width: 36rem; margin: 2rem 0 0; color: rgb(255 255 255 / 62%); font-size: .9rem; line-height: 1.65; }
 
 .location-section { display: grid; grid-template-columns: .68fr 1.32fr; gap: clamp(3rem, 8vw, 8rem); align-items: center; background: var(--paper); }
@@ -781,6 +785,8 @@ a {
   .food-main-image { min-height: 21rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
   .food-gallery { grid-template-rows: 5.5rem 5.5rem; }
   .menu-preview { width: 9rem; height: 12.8rem; }
+  .price-row { display: grid; gap: 1rem; }
+  .price-values { justify-items: start; text-align: left; }
   .form-row, .form-row:has(.form-field-small) { grid-template-columns: 1fr; }
   .preview-kicker { margin-bottom: 2.5rem; }
   .site-footer { grid-template-columns: 1fr; align-items: start; }

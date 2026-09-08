@@ -97,7 +97,7 @@ export default function Home() {
           <p className="section-index">02 · Không gian nghỉ</p>
           <h2 id="rooms-title">Mỗi căn phòng,<br /><em>một khoảng xanh riêng.</em></h2>
           <p className="section-intro">
-            Từ bungalow giữa đồi chè đến không gian cho đoàn đông người — chọn một nhịp nghỉ hợp với chuyến đi của bạn.
+            Từ bungalow 35m² dành cho hai người đến nhà sàn cho đoàn đông — chọn một nhịp nghỉ hợp với chuyến đi của bạn. Tất cả giá đã bao gồm ăn sáng.
           </p>
         </div>
 
@@ -109,28 +109,28 @@ export default function Home() {
             <div className="room-content">
               <p className="room-number">01 / HẠNG PHÒNG</p>
               <h3>Bungalow đồi chè</h3>
-              <p>10 căn, mỗi căn 35m² với tầm nhìn ôm trọn những đồi chè bát úp. Có lựa chọn 1 giường lớn hoặc 2 giường lớn.</p>
-              <span className="room-status">Từ 1.200.000đ / 2 khách</span>
+              <p>10 căn, mỗi căn 35m². Căn 1–5 có 1 giường 2 × 2,2m; căn 6–10 có 2 giường 1,6 × 2m. Phù hợp cho 2 khách.</p>
+              <span className="room-status">1.200.000đ / 2 khách · đã giảm 20%</span>
             </div>
           </article>
 
           <article className="room-card room-card-reverse">
-            <div className="room-placeholder room-placeholder-yellow" aria-label="Thông tin Nhà cổ">
+            <div className="room-placeholder room-placeholder-yellow" aria-label="Thông tin Nhà cọ">
               <span>2 giường lớn</span><strong>02</strong>
             </div>
             <div className="room-content">
               <p className="room-number">02 / HẠNG PHÒNG</p>
-              <h3>Nhà cổ</h3>
-              <p>Hai căn với không gian ấm cúng, mỗi căn có 2 giường lớn, phù hợp cho gia đình hoặc nhóm bạn từ 4–6 người.</p>
-              <span className="room-status">Từ 640.000đ / 2 khách</span>
+              <h3>Khu nhà cọ</h3>
+              <p>Gồm Nhà cọ 1 và 2, mỗi căn có 2 giường 1,6 × 2m. Lựa chọn tiết kiệm, phù hợp nhóm nhỏ hoặc gia đình.</p>
+              <span className="room-status">640.000đ / 2 khách · đã giảm 20%</span>
             </div>
           </article>
         </div>
 
         <ul className="room-catalogue" aria-label="Các lựa chọn lưu trú khác">
-          <li><strong>Bungalow view hồ</strong><span>35m² · mái kính ngắm trời đêm</span><em>1.280.000đ / 2 khách</em></li>
-          <li><strong>Nhà sàn đồi</strong><span>2 tầng · phù hợp 10–12 khách</span><em>3.360.000đ / 10 khách</em></li>
-          <li><strong>Nhà sàn Ao</strong><span>Khu ngủ tập thể · tối đa 30 khách</span><em>Từ 280.000đ / giường</em></li>
+          <li><strong>Bungalow view hồ</strong><span>35m² · tiêu chuẩn 2 khách</span><em>1.280.000đ / 2 khách</em></li>
+          <li><strong>Khu nhà sàn đồi</strong><span>2 tầng · 120m² · tiêu chuẩn 10–12 khách</span><em>3.360.000đ / 10 khách</em></li>
+          <li><strong>Khu nhà sàn Ao</strong><span>250m² · tối đa 30 khách · tính giá theo giường</span><em>Từ 280.000đ / giường</em></li>
         </ul>
       </section>
 
@@ -211,12 +211,27 @@ export default function Home() {
           <h2 id="pricing-title">Rõ ràng trước<br />khi bạn lên đường.</h2>
         </div>
         <ul className="price-table" aria-label="Bảng giá phòng ưu đãi">
-          <li className="price-row"><span>Bungalow đồi chè</span><strong>1.200.000đ / 2 khách</strong></li>
-          <li className="price-row"><span>Nhà cổ</span><strong>640.000đ / 2 khách</strong></li>
-          <li className="price-row"><span>Bungalow view hồ</span><strong>1.280.000đ / 2 khách</strong></li>
-          <li className="price-row"><span>Nhà sàn đồi</span><strong>3.360.000đ / 10 khách</strong></li>
-          <li className="price-row"><span>Nhà sàn Ao</span><strong>Từ 280.000đ / giường</strong></li>
-          <li className="price-note">Mức giá ưu đãi 20% theo bảng giá khách lẻ, đã bao gồm ăn sáng. Phụ thu Nhà sàn Ao: 300.000đ / khách, tối đa 4 khách.</li>
+          <li className="price-row">
+            <div><b>Khu nhà sàn Ao</b><span>250m² · tối đa 30 khách · tính giá theo giường</span></div>
+            <div className="price-values"><del>350.000đ / giường 1m</del><strong>280.000đ / giường 1m</strong><del>600.000đ / giường 1,6m (2 khách)</del><strong>480.000đ / giường 1,6m</strong></div>
+          </li>
+          <li className="price-row">
+            <div><b>Khu Bungalow đồi chè</b><span>10 căn · 35m² · tiêu chuẩn 2 khách</span></div>
+            <div className="price-values"><del>1.500.000đ / 2 khách</del><strong>1.200.000đ / 2 khách</strong></div>
+          </li>
+          <li className="price-row">
+            <div><b>Khu nhà cọ</b><span>Nhà cọ 1 &amp; 2 · 2 giường 1,6 × 2m</span></div>
+            <div className="price-values"><del>800.000đ / 2 khách</del><strong>640.000đ / 2 khách</strong></div>
+          </li>
+          <li className="price-row">
+            <div><b>Bungalow view hồ</b><span>35m² · tiêu chuẩn 2 khách</span></div>
+            <div className="price-values"><del>1.600.000đ / 2 khách</del><strong>1.280.000đ / 2 khách</strong></div>
+          </li>
+          <li className="price-row">
+            <div><b>Khu nhà sàn đồi</b><span>2 tầng · 120m² · tiêu chuẩn 10–12 khách</span></div>
+            <div className="price-values"><del>4.200.000đ / 10 khách</del><strong>3.360.000đ / 10 khách</strong></div>
+          </li>
+          <li className="price-note">Giá ưu đãi đã giảm 20% và bao gồm ăn sáng. Phụ thu Bungalow và Nhà cọ: 300.000đ / khách, tối đa 4 khách / phòng.</li>
         </ul>
       </section>
 
