@@ -1,4 +1,13 @@
 import { BookingForm } from './booking-form';
+import blog1Caption from '../src/blogs/blog1/blog1.txt?raw';
+import blog2Caption from '../src/blogs/blog2/blog2.txt?raw';
+import blog3Caption from '../src/blogs/blog3/blog3.txt?raw';
+
+const blogEntries = [
+  { number: '01', title: 'Những điều không hoàn hảo', caption: blog1Caption },
+  { number: '02', title: 'Dòng suối và bình yên', caption: blog2Caption },
+  { number: '03', title: 'Câu chuyện sống lại của rác', caption: blog3Caption },
+];
 
 export default function Home() {
   return (
@@ -26,6 +35,15 @@ export default function Home() {
           Đặt phòng <span aria-hidden="true">↗</span>
         </a>
       </header>
+
+      <nav className="mobile-nav" aria-label="Điều hướng trên điện thoại">
+        <a href="#cau-chuyen">Câu chuyện</a>
+        <a href="#phong">Phòng</a>
+        <a href="#trai-nghiem">Trải nghiệm</a>
+        <a href="#am-thuc">Ẩm thực</a>
+        <a href="#gia">Giá</a>
+        <a href="#vi-tri">Vị trí</a>
+      </nav>
 
       <section className="hero" id="top">
         <div className="hero-copy" id="noi-dung">
@@ -88,35 +106,41 @@ export default function Home() {
           <p className="section-index">02 · Không gian nghỉ</p>
           <h2 id="rooms-title">Mỗi căn phòng,<br /><em>một khoảng xanh riêng.</em></h2>
           <p className="section-intro">
-            Tên phòng, sức chứa, tiện nghi và ảnh thực tế sẽ được cập nhật sau khi có dữ liệu chính thức.
+            Từ bungalow giữa đồi chè đến không gian cho đoàn đông người — chọn một nhịp nghỉ hợp với chuyến đi của bạn.
           </p>
         </div>
 
         <div className="room-list">
           <article className="room-card">
-            <div className="room-placeholder" aria-label="Vị trí dành cho ảnh phòng thứ nhất">
-              <span>Ảnh phòng</span><strong>01</strong>
+            <div className="room-placeholder" aria-label="Thông tin Bungalow đồi chè">
+              <span>Bungalow · 35m²</span><strong>01</strong>
             </div>
             <div className="room-content">
               <p className="room-number">01 / HẠNG PHÒNG</p>
-              <h3>Phòng giữa màu chè</h3>
-              <p>Một tên gọi gợi ý cho bản thiết kế. Thông tin giường, diện tích, tầm nhìn và tiện nghi đang chờ xác nhận.</p>
-              <span className="room-status">Thông tin chờ xác nhận</span>
+              <h3>Bungalow đồi chè</h3>
+              <p>10 căn, mỗi căn 35m² với tầm nhìn ôm trọn những đồi chè bát úp. Có lựa chọn 1 giường lớn hoặc 2 giường lớn.</p>
+              <span className="room-status">Từ 1.200.000đ / 2 khách</span>
             </div>
           </article>
 
           <article className="room-card room-card-reverse">
-            <div className="room-placeholder room-placeholder-yellow" aria-label="Vị trí dành cho ảnh phòng thứ hai">
-              <span>Ảnh phòng</span><strong>02</strong>
+            <div className="room-placeholder room-placeholder-yellow" aria-label="Thông tin Nhà cổ">
+              <span>2 giường lớn</span><strong>02</strong>
             </div>
             <div className="room-content">
               <p className="room-number">02 / HẠNG PHÒNG</p>
-              <h3>Phòng nắng vàng</h3>
-              <p>Một tên gọi gợi ý cho bản thiết kế. Sức chứa, bố trí và chính sách đi kèm sẽ được điền từ thông tin của chủ nhà.</p>
-              <span className="room-status">Thông tin chờ xác nhận</span>
+              <h3>Nhà cổ</h3>
+              <p>Hai căn với không gian ấm cúng, mỗi căn có 2 giường lớn, phù hợp cho gia đình hoặc nhóm bạn từ 4–6 người.</p>
+              <span className="room-status">Từ 640.000đ / 2 khách</span>
             </div>
           </article>
         </div>
+
+        <ul className="room-catalogue" aria-label="Các lựa chọn lưu trú khác">
+          <li><strong>Bungalow view hồ</strong><span>35m² · mái kính ngắm trời đêm</span><em>1.280.000đ / 2 khách</em></li>
+          <li><strong>Nhà sàn đồi</strong><span>2 tầng · phù hợp 10–12 khách</span><em>3.360.000đ / 10 khách</em></li>
+          <li><strong>Nhà sàn Ao</strong><span>Khu ngủ tập thể · tối đa 30 khách</span><em>Từ 280.000đ / giường</em></li>
+        </ul>
       </section>
 
       <section className="experiences-section section-pad" id="trai-nghiem" aria-labelledby="experiences-title">
@@ -152,10 +176,31 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="journal-section section-pad" aria-labelledby="journal-title">
+        <div className="journal-heading">
+          <p className="section-index">04 · Nhật ký Long Cốc</p>
+          <h2 id="journal-title">Những câu chuyện<br /><em>được viết từ nơi này.</em></h2>
+        </div>
+        <div className="journal-list">
+          {blogEntries.map((entry) => (
+            <details className="journal-entry" key={entry.number}>
+              <summary>
+                <span>{entry.number}</span>
+                <h3>{entry.title}</h3>
+                <b aria-hidden="true">+</b>
+              </summary>
+              <div className="journal-caption">
+                {entry.caption.trim().split(/\n\s*\n/).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
       <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
         <div className="food-main-image" aria-hidden="true" />
         <div className="food-copy">
-          <p className="section-index section-index-light">04 · Ẩm thực</p>
+          <p className="section-index section-index-light">05 · Ẩm thực</p>
           <h2 id="food-title">Một bữa ăn,<br /><em>một chiều chậm.</em></h2>
           <p>
             Thực đơn tại Long Cốc là một phần của chuyến đi: những món ăn và đồ uống để bạn ngồi lâu hơn, trò chuyện nhiều hơn, ngắm màu chè đổi theo nắng.
@@ -170,20 +215,22 @@ export default function Home() {
 
       <section className="pricing-section section-pad" id="gia" aria-labelledby="pricing-title">
         <div className="pricing-heading">
-          <p className="section-index section-index-light">05 · Giá phòng</p>
+          <p className="section-index section-index-light">06 · Giá phòng</p>
           <h2 id="pricing-title">Rõ ràng trước<br />khi bạn lên đường.</h2>
         </div>
-        <ul className="price-table" aria-label="Các nhóm giá đang chờ cập nhật">
-          <li className="price-row"><span>Giá đêm thường</span><strong>Đang cập nhật</strong></li>
-          <li className="price-row"><span>Cuối tuần &amp; ngày lễ</span><strong>Đang cập nhật</strong></li>
-          <li className="price-row"><span>Phụ thu &amp; dịch vụ</span><strong>Đang cập nhật</strong></li>
-          <li className="price-note">Website chưa hiển thị mức giá giả định. Bảng này sẽ được mở ngay khi chính sách giá được xác nhận.</li>
+        <ul className="price-table" aria-label="Bảng giá phòng ưu đãi">
+          <li className="price-row"><span>Bungalow đồi chè</span><strong>1.200.000đ / 2 khách</strong></li>
+          <li className="price-row"><span>Nhà cổ</span><strong>640.000đ / 2 khách</strong></li>
+          <li className="price-row"><span>Bungalow view hồ</span><strong>1.280.000đ / 2 khách</strong></li>
+          <li className="price-row"><span>Nhà sàn đồi</span><strong>3.360.000đ / 10 khách</strong></li>
+          <li className="price-row"><span>Nhà sàn Ao</span><strong>Từ 280.000đ / giường</strong></li>
+          <li className="price-note">Mức giá ưu đãi 20% theo bảng giá khách lẻ, đã bao gồm ăn sáng. Phụ thu Nhà sàn Ao: 300.000đ / khách, tối đa 4 khách.</li>
         </ul>
       </section>
 
       <section className="location-section section-pad" id="vi-tri" aria-labelledby="location-title">
         <div className="location-copy">
-          <p className="section-index">06 · Vị trí</p>
+          <p className="section-index">07 · Vị trí</p>
           <h2 id="location-title">Tìm về vùng đồi chè Long Cốc.</h2>
           <p>
             Bản đồ hiện hiển thị khu vực đồi chè Long Cốc để định hướng. Điểm ghim chính xác và hướng dẫn đường vào homestay sẽ được cập nhật khi địa chỉ được xác nhận.
@@ -205,7 +252,7 @@ export default function Home() {
 
       <section className="booking-section section-pad" id="dat-phong" aria-labelledby="booking-title">
         <div className="booking-heading">
-          <p className="section-index">07 · Đặt phòng</p>
+          <p className="section-index">08 · Đặt phòng</p>
           <h2 id="booking-title">Bạn chọn ngày.<br /><em>Chúng tôi chuẩn bị trà.</em></h2>
           <p>Hãy tạo một bản yêu cầu để kiểm tra nội dung trước. Website chưa gửi dữ liệu đi đâu cho tới khi kênh liên hệ chính thức được kết nối.</p>
         </div>

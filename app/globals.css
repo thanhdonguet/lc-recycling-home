@@ -57,8 +57,8 @@
   --cream: #fbf8e9;
   --paper: #fffdf6;
   --ink: #102a1b;
-  --font-body: Arial, Helvetica, sans-serif;
-  --font-display: Georgia, 'Times New Roman', serif;
+  --font-body: 'Segoe UI', 'Noto Sans', Arial, sans-serif;
+  --font-display: 'Cambria', 'Times New Roman', serif;
   --background: #fbf8e9;
   --foreground: #102a1b;
   --card: #fffdf6;
@@ -213,9 +213,22 @@ a {
 
 .desktop-nav {
   display: flex;
-  gap: clamp(1rem, 2.6vw, 2.7rem);
-  font-size: 0.82rem;
+  gap: clamp(0.3rem, 1vw, 0.8rem);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+  background: rgb(8 53 29 / 28%);
+  padding: 0.32rem;
+  backdrop-filter: blur(12px);
+  font-size: 0.94rem;
   font-weight: 700;
+}
+
+.desktop-nav a {
+  min-height: 2.65rem;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 0.85rem;
 }
 
 .desktop-nav a,
@@ -231,11 +244,18 @@ a {
 
 .header-cta {
   justify-self: end;
-  border-bottom: 1px solid rgb(255 255 255 / 45%);
-  padding-block: 0.3rem;
-  font-size: 0.82rem;
+  min-height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 10%);
+  padding: 0 1rem;
+  font-size: 0.94rem;
   font-weight: 800;
 }
+
+.mobile-nav { display: none; }
 
 .hero {
   position: relative;
@@ -491,6 +511,36 @@ a {
     display: none;
   }
 
+  .mobile-nav {
+    position: absolute;
+    z-index: 30;
+    top: 4.9rem;
+    left: 0;
+    display: flex;
+    width: 100%;
+    gap: .55rem;
+    overflow-x: auto;
+    padding: .45rem 1.2rem .75rem;
+    scrollbar-width: none;
+  }
+
+  .mobile-nav::-webkit-scrollbar { display: none; }
+
+  .mobile-nav a {
+    display: inline-flex;
+    min-height: 2.85rem;
+    flex: 0 0 auto;
+    align-items: center;
+    border: 1px solid rgb(255 255 255 / 32%);
+    border-radius: 999px;
+    background: rgb(8 53 29 / 66%);
+    padding: 0 1rem;
+    color: white;
+    font-size: .94rem;
+    font-weight: 750;
+    backdrop-filter: blur(12px);
+  }
+
   .hero {
     grid-template-columns: 1fr;
   }
@@ -528,7 +578,7 @@ a {
   }
 
   .hero-copy {
-    padding-top: 7.6rem;
+    padding-top: 10.5rem;
   }
 
   .hero h1 {
@@ -568,7 +618,7 @@ a {
 .section-index { margin: 0 0 2rem; color: var(--tea-green); font-size: .75rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
 .story-section { background: var(--paper); }
 .story-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(3rem, 10vw, 10rem); align-items: start; }
-.story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { max-width: 13ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.8vw, 6.2rem); font-weight: 400; line-height: .98; letter-spacing: -.055em; }
+.story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { max-width: 13ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.8vw, 6.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .story-copy { max-width: 39rem; padding-top: .7rem; color: #425a49; font-size: 1rem; line-height: 1.75; }
 .story-copy p { margin: 0 0 1.5rem; }
 .story-copy .story-lead { color: var(--ink); font-family: var(--font-display); font-size: clamp(1.35rem, 2vw, 1.8rem); line-height: 1.45; }
@@ -587,15 +637,20 @@ a {
 .room-placeholder-yellow { border-radius: 8rem 1rem 1rem; background: linear-gradient(145deg, rgb(255 255 255 / 22%), transparent 42%), var(--tea-yellow); color: var(--tea-green-deep); }
 .room-placeholder span { align-self: start; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
 .room-placeholder strong { font-family: var(--font-display); font-size: clamp(5rem, 12vw, 11rem); font-weight: 400; line-height: .7; opacity: .24; }
-.room-content h3 { margin: .6rem 0 1.2rem; font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 3.6rem); font-weight: 400; line-height: 1.05; }
+.room-content h3 { margin: .6rem 0 1.2rem; font-family: var(--font-display); font-size: clamp(2rem, 3.2vw, 3.6rem); font-weight: 600; line-height: 1.12; letter-spacing: -.015em; }
 .room-content > p:not(.room-number) { color: #4d6656; line-height: 1.7; }
 .room-number { margin: 0; color: var(--tea-green); font-size: .7rem; font-weight: 800; letter-spacing: .12em; }
 .room-status { display: inline-block; margin-top: 1rem; border-bottom: 1px solid var(--tea-green); padding-bottom: .35rem; color: var(--tea-green); font-size: .8rem; font-weight: 800; }
+.room-catalogue { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: clamp(3rem, 7vw, 6rem) 0 0; padding: 0; list-style: none; }
+.room-catalogue li { display: grid; gap: .55rem; min-height: 12rem; border: 1px solid #c7d5bf; border-radius: .8rem; background: var(--paper); padding: 1.45rem; box-shadow: 0 1rem 2.2rem rgb(11 61 36 / 7%); }
+.room-catalogue strong { color: var(--tea-green-deep); font-family: var(--font-display); font-size: 1.5rem; line-height: 1.18; }
+.room-catalogue span { color: #546a59; line-height: 1.55; }
+.room-catalogue em { align-self: end; color: var(--tea-green); font-size: .9rem; font-style: normal; font-weight: 800; }
 
 .experiences-section { position: relative; overflow: hidden; background: #dcebd2; }
 .experiences-section::before { content: ''; position: absolute; top: -18rem; right: -16rem; width: 38rem; height: 38rem; border-radius: 50%; background: rgb(245 200 76 / 40%); filter: blur(10px); }
 .experience-heading { position: relative; z-index: 1; display: flex; justify-content: space-between; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
-.experience-heading h2 { max-width: 12ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+.experience-heading h2 { max-width: 12ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .experience-heading h2 em { color: var(--tea-green-bright); font-weight: 400; }
 .experience-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr .9fr; gap: clamp(1rem, 2.4vw, 2rem); align-items: end; }
 .experience-card { overflow: hidden; border: 1px solid rgb(11 61 36 / 14%); border-radius: 1.2rem; background: var(--paper); box-shadow: 0 1.4rem 2.6rem rgb(11 61 36 / 14%); transform: translateY(0); transition: transform 260ms ease, box-shadow 260ms ease; }
@@ -612,10 +667,25 @@ a {
 .experience-card-copy h3 { margin: 0 0 1.5rem; font-family: var(--font-display); font-size: clamp(1.55rem, 2.1vw, 2.25rem); font-weight: 400; line-height: 1.05; }
 .experience-card-copy span { color: #526a58; font-size: .86rem; }
 
+.journal-section { background: var(--paper); }
+.journal-heading { display: grid; grid-template-columns: .65fr 1.35fr; gap: 2rem; align-items: end; margin-bottom: clamp(3rem, 7vw, 6rem); }
+.journal-heading h2 { max-width: 15ch; margin: 0; font-family: var(--font-display); font-size: clamp(2.8rem, 5.3vw, 5.8rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
+.journal-heading h2 em { color: var(--tea-green-bright); font-weight: 600; }
+.journal-list { border-top: 1px solid #bfd0ba; }
+.journal-entry { border-bottom: 1px solid #bfd0ba; }
+.journal-entry summary { display: grid; grid-template-columns: 4rem minmax(0, 1fr) auto; align-items: center; gap: 1.25rem; cursor: pointer; list-style: none; padding: 1.4rem 0; }
+.journal-entry summary::-webkit-details-marker { display: none; }
+.journal-entry summary span { color: var(--tea-green); font-size: .8rem; font-weight: 800; letter-spacing: .1em; }
+.journal-entry summary h3 { margin: 0; font-family: var(--font-display); font-size: clamp(1.5rem, 2.5vw, 2.5rem); font-weight: 600; line-height: 1.15; }
+.journal-entry summary b { display: grid; width: 2.4rem; height: 2.4rem; place-items: center; border: 1px solid #acc2a5; border-radius: 50%; color: var(--tea-green); font-size: 1.35rem; font-weight: 400; transition: transform 180ms ease; }
+.journal-entry[open] summary b { transform: rotate(45deg); }
+.journal-caption { max-width: 54rem; padding: 0 0 2rem 5.25rem; color: #38533e; font-size: 1rem; line-height: 1.78; }
+.journal-caption p { white-space: pre-line; margin: 0 0 1.2rem; }
+
 .food-section { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(20rem, .88fr); gap: clamp(2rem, 7vw, 7rem); align-items: stretch; background: var(--tea-green-deep); color: white; }
 .food-main-image { min-height: 39rem; border-radius: 1rem 8rem 1rem 1rem; background: center / cover no-repeat url('/images/long-coc/meal.jpg'); box-shadow: 1.4rem 1.4rem 0 rgb(245 200 76 / 88%); }
 .food-copy { display: flex; flex-direction: column; justify-content: center; }
-.food-copy h2 { margin: 0 0 1.6rem; font-family: var(--font-display); font-size: clamp(2.8rem, 4.8vw, 5.2rem); font-weight: 400; line-height: .98; letter-spacing: -.05em; }
+.food-copy h2 { margin: 0 0 1.6rem; font-family: var(--font-display); font-size: clamp(2.8rem, 4.8vw, 5.2rem); font-weight: 600; line-height: 1.08; letter-spacing: -.02em; }
 .food-copy h2 em { color: var(--tea-yellow); font-weight: 400; }
 .food-copy > p:not(.section-index, .food-note) { max-width: 34rem; margin: 0; color: rgb(255 255 255 / 72%); font-size: 1rem; line-height: 1.7; }
 .menu-previews { display: flex; align-items: end; min-height: 13rem; margin: 2.2rem 0 1.2rem; }
@@ -677,10 +747,12 @@ a {
   .room-card { grid-template-columns: 1fr; }
   .room-placeholder, .room-card-reverse .room-placeholder, .room-card-reverse .room-content { order: initial; }
   .room-content { max-width: 42rem; }
+  .room-catalogue { grid-template-columns: 1fr; }
   .experience-grid { grid-template-columns: 1fr 1fr; }
   .experience-card-tall { grid-row: span 2; margin-bottom: 0; }
   .experience-card-accent { margin-bottom: 0; }
   .food-main-image { min-height: 29rem; max-width: 48rem; }
+  .journal-heading { grid-template-columns: 1fr; }
   .map-frame { border-radius: 5rem 1rem 1rem; }
   .site-footer { grid-template-columns: 1fr 1fr; }
   .site-footer > p:nth-child(2) { display: none; }
@@ -692,11 +764,15 @@ a {
   .story-grid h2, .section-heading h2, .pricing-heading h2, .location-copy h2, .booking-heading h2 { font-size: clamp(2.65rem, 13vw, 4rem); }
   .room-placeholder { min-height: 25rem; border-radius: 1rem 5rem 1rem 1rem; }
   .room-placeholder-yellow { border-radius: 5rem 1rem 1rem; }
+  .room-catalogue li { min-height: auto; }
   .experience-heading { display: block; }
   .experience-heading .section-index { margin-bottom: 1.5rem; }
   .experience-grid { grid-template-columns: 1fr; }
   .experience-card-tall { grid-row: auto; }
   .experience-card-tall .experience-image, .experience-image { min-height: 19rem; }
+  .journal-entry summary { grid-template-columns: 2.25rem minmax(0, 1fr) auto; gap: .75rem; padding: 1.1rem 0; }
+  .journal-entry summary h3 { font-size: 1.5rem; }
+  .journal-caption { padding: 0 0 1.6rem; font-size: 1rem; line-height: 1.72; }
   .food-main-image { min-height: 23rem; border-radius: 1rem 4.5rem 1rem 1rem; box-shadow: .8rem .8rem 0 rgb(245 200 76 / 88%); }
   .form-row, .form-row:has(.form-field-small) { grid-template-columns: 1fr; }
   .preview-kicker { margin-bottom: 2.5rem; }
