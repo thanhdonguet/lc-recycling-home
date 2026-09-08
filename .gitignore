@@ -1,0 +1,39 @@
+# Dependencies and build output
+node_modules/
+.next/
+.vinext/
+dist/
+build/
+out/
+.turbo/
+coverage/
+
+# Local environments and hosting state
+.env
+.env.*
+!.env.example
+.vercel/
+.netlify/
+.wrangler/
+outputs/
+work/
+
+# Logs and caches
+*.log
+.eslintcache
+.stylelintcache
+.pnpm-store/
+*.pem
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Local visual-test artifacts
+playwright-report/
+test-results/
+
+# Local project context for Codex; never publish this folder
+.wsr-local/
