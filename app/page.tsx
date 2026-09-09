@@ -1,4 +1,5 @@
 import { BookingForm } from './booking-form';
+import { GuestChat } from './guest-chat';
 import { ImageLightbox } from './image-lightbox';
 import { StoryDialog } from './story-dialog';
 import blog1Caption from '../src/blogs/blog1/blog1.txt?raw';
@@ -52,7 +53,7 @@ export default function Home() {
       <section className="hero" id="top">
         <div className="hero-copy" id="noi-dung">
           <p className="eyebrow"><span /> Homestay tái chế · Đồi chè Long Cốc</p>
-          <h1>Ở giữa những<br />đồi chè <em>đang thở.</em></h1>
+            <h1>Ở giữa những<br />đồi chè<br /><em>đang thở.</em></h1>
           <p className="hero-lead">
             Một ngôi nhà nhỏ được tạo nên từ những vật liệu có vòng đời mới —
             để bạn nghỉ chậm, uống trà và thức dậy cùng màu xanh Long Cốc.
@@ -241,14 +242,17 @@ export default function Home() {
       </section>
 
       <footer className="site-footer">
-        <div className="footer-brand"><span className="footer-logo" aria-hidden="true" /><strong>Long Cốc<br />Recycling Home</strong></div>
-              <p>© Long Cốc Recycling Home · Bản quyền web: <a href="https://fb.com/thanhdonguet" target="_blank" rel="noreferrer">fb.com/thanhdonguet</a></p>
-        <div className="footer-contact">
-          <a href="https://www.facebook.com/profile.php?id=61590562556980" target="_blank" rel="noreferrer">Facebook Long Cốc</a>
-          <a href="https://zalo.me/0388005474" target="_blank" rel="noreferrer">Zalo: 0388 005 474</a>
-          <a href="tel:0388005474">Gọi: 0388 005 474</a>
+        <div className="footer-inner">
+          <div className="footer-brand"><span className="footer-logo" aria-hidden="true" /><strong>Long Cốc<br />Recycling Home</strong></div>
+          <p>© Long Cốc Recycling Home · Bản quyền web: <a href="https://fb.com/thanhdonguet" target="_blank" rel="noreferrer">fb.com/thanhdonguet</a></p>
+          <div className="footer-contact">
+            <a href="https://www.facebook.com/profile.php?id=61590562556980" target="_blank" rel="noreferrer">Facebook Long Cốc</a>
+            <a href="https://zalo.me/0388005474" target="_blank" rel="noreferrer">Zalo: 0388 005 474</a>
+            <a href="tel:0388005474">Gọi: 0388 005 474</a>
+          </div>
         </div>
       </footer>
+      <GuestChat />
     </main>
   );
 }
