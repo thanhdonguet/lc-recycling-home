@@ -857,7 +857,7 @@ a {
 .footer-contact { display: flex; flex-wrap: wrap; justify-content: end; gap: .65rem 1.15rem; color: rgb(255 255 255 / 78%); font-size: .85rem; }
 .footer-contact a { border-bottom: 1px solid rgb(255 255 255 / 38%); padding-bottom: .2rem; }
 
-.activity-floating-button { position: fixed; z-index: 70; top: 7.25rem; right: max(1rem, calc((100vw - var(--page-max-width)) / 4 + 1rem)); display: inline-flex; align-items: center; gap: .6rem; min-height: 3rem; border: 1px solid rgb(11 61 36 / 18%); border-radius: 999px; padding: .55rem 1rem .55rem .6rem; background: var(--tea-yellow); box-shadow: 0 .7rem 1.7rem rgb(7 39 21 / 24%); color: var(--tea-green-deep); font: inherit; font-size: .82rem; font-weight: 800; cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease; }
+.activity-floating-button { position: fixed; z-index: 70; right: max(1rem, calc((100vw - var(--page-max-width)) / 4 + 1rem)); bottom: 5.1rem; display: inline-flex; align-items: center; gap: .6rem; min-height: 3rem; border: 1px solid rgb(11 61 36 / 18%); border-radius: 999px; padding: .55rem 1rem .55rem .6rem; background: var(--tea-yellow); box-shadow: 0 .7rem 1.7rem rgb(7 39 21 / 24%); color: var(--tea-green-deep); font: inherit; font-size: .82rem; font-weight: 800; cursor: pointer; transition: transform 180ms ease, box-shadow 180ms ease; }
 .activity-floating-button:hover { transform: translateY(-.15rem); box-shadow: 0 1rem 2rem rgb(7 39 21 / 30%); }
 .activity-floating-button:focus-visible { outline: 3px solid white; outline-offset: 3px; }
 .activity-floating-icon { display: grid; width: 1.8rem; height: 1.8rem; place-items: center; border-radius: 50%; background: var(--tea-green-deep); color: var(--tea-yellow); font-size: .85rem; }
@@ -975,7 +975,7 @@ a {
   .preview-kicker { margin-bottom: 2.5rem; }
   .footer-inner { grid-template-columns: 1fr; align-items: start; }
   .footer-contact { justify-content: start; }
-  .activity-floating-button { top: 8.6rem; min-height: 2.85rem; padding: .5rem .75rem .5rem .5rem; }
+  .activity-floating-button { bottom: 5.15rem; min-height: 2.85rem; padding: .5rem .75rem .5rem .5rem; }
   .activity-button-long { display: none; }
   .activity-button-short { display: inline; }
   .activity-list li { grid-template-columns: 1.9rem minmax(0, 1fr); gap: .75rem; align-items: start; }
