@@ -1,7 +1,10 @@
+import { ActivityDialog } from './activity-dialog';
 import { BookingForm } from './booking-form';
 import { GuestChat } from './guest-chat';
 import { ImageLightbox } from './image-lightbox';
 import { StoryDialog } from './story-dialog';
+import { TourCarousel } from './tour-carousel';
+import { TourDialog } from './tour-dialog';
 import blog1Caption from '../src/blogs/blog1/blog1.txt?raw';
 import blog2Caption from '../src/blogs/blog2/blog2.txt?raw';
 import blog3Caption from '../src/blogs/blog3/blog3.txt?raw';
@@ -10,6 +13,7 @@ const galleryImages = [
   'blogs/blog1/791738544_122135353383352085_6547678781794261905_n.jpg', 'blogs/blog1/791738544_122135354385352085_6679969267739404664_n.jpg', 'blogs/blog1/791890187_122135354067352085_2320784067566839605_n.jpg', 'blogs/blog1/791996883_122135354763352085_6835726384657420363_n.jpg', 'blogs/blog1/792091171_122135355099352085_5796572665175687647_n.jpg', 'blogs/blog1/792506782_122135354481352085_4656047890465365277_n.jpg', 'blogs/blog1/792506786_122135353341352085_8685687830757324677_n.jpg', 'blogs/blog1/792766687_122135353647352085_4780492960323049505_n.jpg', 'blogs/blog1/792915460_122135354019352085_4570101446555961538_n.jpg', 'blogs/blog1/793002147_122135353965352085_537530233104752117_n.jpg', 'blogs/blog1/793002160_122135354259352085_370011358849754404_n.jpg', 'blogs/blog1/793245570_122135353911352085_4462698375335025166_n.jpg', 'blogs/blog1/794096104_122135353293352085_3917906467708614974_n.jpg', 'blogs/blog1/796332340_122135353461352085_2630398348386934461_n.jpg',
   'blogs/blog2/792766684_122135591589352085_235097256750071410_n.jpg', 'blogs/blog2/792915448_122135591919352085_2151498709929845204_n.jpg', 'blogs/blog2/793002157_122135591319352085_5271370120441148065_n.jpg', 'blogs/blog2/793245567_122135591427352085_2080649044069938867_n.jpg', 'blogs/blog2/793245575_122135591835352085_778742561166222446_n.jpg', 'blogs/blog2/794144776_122135591373352085_1345928345854646588_n.jpg', 'blogs/blog2/798743939_122135591469352085_2855742433634961013_n.jpg',
   'blogs/blog3/792705582_122135975319352085_5755501330749458011_n.jpg', 'blogs/blog3/794725595_122135975499352085_2128921241564406758_n.jpg', 'blogs/blog3/795235453_122135975403352085_8943296675818765867_n.jpg', 'blogs/blog3/798080180_122135975673352085_3789682076064929711_n.jpg', 'blogs/blog3/798215738_122135975721352085_7348984584942084897_n.jpg', 'blogs/blog3/799085903_122135975361352085_7770822083023284784_n.jpg',
+  'more_gallery/2aOboQxhIp1Hi7HLi2t4ZSpW9IPbuJDjdiKs20B6.jpg', 'more_gallery/2aOboQxhImHHDxKlhJdJsy4Nmc6VjN6vpBQAaWKe.jpg', 'more_gallery/2aOboQxhIlnNZrpu95bke7wy1Dk3LYh0Yup0Vx5s.jpg',
 ];
 
 export default function Home() {
@@ -28,11 +32,11 @@ export default function Home() {
         <nav className="desktop-nav" aria-label="Điều hướng chính">
           <a href="#cau-chuyen">Câu chuyện</a>
           <a href="#phong">Phòng</a>
-          <a href="#trai-nghiem">Trải nghiệm</a>
-          <a href="#gallery">Gallery</a>
+          <a href="#trai-nghiem">Tour 2H</a>
           <a href="#am-thuc">Ẩm thực</a>
           <a href="#gia">Giá</a>
           <a href="#vi-tri">Vị trí</a>
+          <a href="#gallery">Gallery</a>
         </nav>
 
         <a className="header-cta" href="#dat-phong">
@@ -43,11 +47,11 @@ export default function Home() {
       <nav className="mobile-nav" aria-label="Điều hướng trên điện thoại">
         <a href="#cau-chuyen">Câu chuyện</a>
         <a href="#phong">Phòng</a>
-        <a href="#trai-nghiem">Trải nghiệm</a>
-        <a href="#gallery">Gallery</a>
+        <a href="#trai-nghiem">Tour 2H</a>
         <a href="#am-thuc">Ẩm thực</a>
         <a href="#gia">Giá</a>
         <a href="#vi-tri">Vị trí</a>
+        <a href="#gallery">Gallery</a>
       </nav>
 
       <section className="hero" id="top">
@@ -71,7 +75,7 @@ export default function Home() {
 
         <figure className="hero-visual">
           <div className="image-frame">
-            <ImageLightbox className="hero-photo" src="/images/long-coc/hero-recycling-home.jpg" alt="Không gian nghỉ tại Long Cốc Recycling Home" />
+            <ImageLightbox className="hero-photo" src="/images/long-coc/section1.jpg" alt="Không gian nghỉ tại Long Cốc Recycling Home" />
           </div>
           <figcaption>
             <span>Long Cốc Recycling Home</span>
@@ -119,42 +123,69 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="experiences-section section-pad" id="trai-nghiem" aria-labelledby="experiences-title">
-        <div className="experience-heading">
-          <p className="section-index">03 · Những lát cắt ở Long Cốc</p>
-          <h2 id="experiences-title">Đi chậm lại,<br /><em>thấy nhiều hơn.</em></h2>
-        </div>
-        <div className="experience-grid">
-          <article className="experience-card experience-card-tall">
-            <div className="experience-image experience-image-materials" aria-hidden="true" />
-            <StoryDialog number="01" kicker="Vòng đời mới" title="Vẻ đẹp của những điều được làm lại." caption={blog1Caption} />
-          </article>
-          <article className="experience-card">
-            <div className="experience-image experience-image-stream" aria-hidden="true" />
-            <StoryDialog number="02" kicker="Giữa thiên nhiên" title="Dòng suối và bình yên." caption={blog2Caption} />
-          </article>
-          <article className="experience-card experience-card-accent">
-            <div className="experience-image experience-image-reborn" aria-hidden="true" />
-            <StoryDialog number="03" kicker="Những bông hoa không héo" title="Câu chuyện sống lại của rác." caption={blog3Caption} />
-          </article>
-        </div>
-      </section>
-
-      <section className="gallery-section section-pad" id="gallery" aria-labelledby="gallery-title">
-        <div className="gallery-heading">
-          <p className="section-index">04 · Gallery</p>
-          <h2 id="gallery-title">Những khoảnh khắc<br /><em>ở Long Cốc.</em></h2>
-        </div>
-        <details className="gallery-disclosure">
-          <summary><span>Xem ảnh trong Gallery</span><b aria-hidden="true">+</b></summary>
-          <div className="gallery-grid" aria-label="Thư viện ảnh blog Long Cốc">
-            {galleryImages.map((image) => (
-              <figure className="gallery-item" key={image}>
-                <ImageLightbox className="gallery-image" src={`/images/gallery/${image}`} alt="Khoảnh khắc tại Long Cốc" style={{ backgroundImage: `url("/images/gallery/${image}")` }} />
-              </figure>
-            ))}
+      <section className="tour-section section-pad" id="trai-nghiem" aria-labelledby="tour-title">
+        <div className="tour-heading">
+          <div>
+            <p className="section-index">03 · Tour trải nghiệm</p>
+            <h2 id="tour-title">Long Cốc<br /><em>trong hai giờ.</em></h2>
           </div>
-        </details>
+          <div className="tour-heading-copy">
+            <p>Chạm bình minh · Say tình hoàng hôn · Săn Ngân Hà</p>
+            <span>Ba hành trình ngắn để nhìn đồi chè ở ba khoảnh khắc rất khác nhau.</span>
+          </div>
+        </div>
+
+        <div className="tour-showcase">
+          <div className="tour-image-wrap">
+            <TourCarousel
+              images={[
+                { src: '/images/tour/sunrise.jpg', alt: 'Bình minh trên đồi chè Long Cốc', label: 'Bình minh' },
+                { src: '/images/tour/sunset.jpg', alt: 'Hoàng hôn tại Long Cốc', label: 'Hoàng hôn' },
+                { src: '/images/tour/mkw.jpg', alt: 'Bầu trời đêm và Dải Ngân Hà ở Long Cốc', label: 'Dải Ngân Hà' },
+              ]}
+            />
+            <dl className="tour-facts" aria-label="Thông tin chung của tour">
+              <div><dt>Thời lượng</dt><dd>2 giờ</dd></div>
+              <div><dt>Giá tour</dt><dd>350.000đ / khách</dd></div>
+              <div><dt>Đồng hành</dt><dd>Hướng dẫn viên địa phương</dd></div>
+            </dl>
+          </div>
+
+          <div className="tour-options">
+            <TourDialog
+              eyebrow="Lựa chọn 01 · Bình minh"
+              title="Tour đón bình minh"
+              time="04:30 – 06:30"
+              note="Đẹp nhất vào mùa sương mây bồng bềnh."
+              steps={[
+                { time: '04:30 – 04:45', title: 'Khởi hành trong sương sớm', description: 'Hướng dẫn viên địa phương đón đoàn dưới chân đồi chè và bắt đầu hành trình qua những cung đường uốn lượn.' },
+                { time: '04:45 – 05:45', title: 'Săn biển mây và bình minh', description: 'Dừng tại đỉnh đồi đẹp, ngắm những triền chè dần hiện ra và được hỗ trợ chụp ảnh, quay phim.' },
+                { time: '05:45 – 06:30', title: 'Thưởng trà và thư giãn', description: 'Thưởng thức trà Bát Tiên đặc sản Long Cốc hoặc đồ uống ấm theo mùa, nghe chuyện văn hóa Mường rồi trở về Home.' },
+              ]}
+            />
+            <TourDialog
+              eyebrow="Lựa chọn 02 · Hoàng hôn"
+              title="Tour ngắm hoàng hôn"
+              time="16:30 – 18:30"
+              steps={[
+                { time: '16:30 – 16:50', title: 'Đón gió chiều trung du', description: 'Đón đoàn tại homestay, phổ biến lộ trình và hướng dẫn an toàn trước khi lên đỉnh đồi.' },
+                { time: '16:50 – 17:50', title: 'Săn ảnh hoàng hôn', description: 'Ngắm các triền chè chuyển từ sắc vàng sang cam và hồng tím, với hỗ trợ chụp ảnh và quay phim.' },
+                { time: '17:50 – 18:30', title: 'Đồ uống sunset trên đồi', description: 'Thưởng thức beer lạnh hoặc cocktail, nghe nhạc nhẹ và ngắm mặt trời lặn trước khi trở lại Home.' },
+              ]}
+            />
+            <TourDialog
+              eyebrow="Lựa chọn 03 · Ngân Hà"
+              title="Tour săn Dải Ngân Hà"
+              time="20:00 – 22:00"
+              note="Tour phụ thuộc điều kiện trời trong, không trăng hoặc trăng mờ. Khả năng quan sát Dải Ngân Hà không được bảo đảm khi thời tiết thay đổi."
+              steps={[
+                { time: '20:00 – 20:20', title: 'Xuyên đêm lên đỉnh Long Cốc', description: 'Tập trung cùng hướng dẫn viên, nhận đèn pin và hướng dẫn an toàn trước khi di chuyển lên đồi.' },
+                { time: '20:20 – 21:20', title: 'Chiêm ngưỡng bầu trời sao', description: 'Quan sát bầu trời đêm và, khi điều kiện thuận lợi, được hỗ trợ định vị, chụp ảnh hoặc quay phim phơi sáng Dải Ngân Hà.' },
+                { time: '21:20 – 22:00', title: 'Đồ uống dưới ánh sao', description: 'Thưởng thức beer, cocktail hoặc mocktail, nghe chuyện về các chòm sao rồi di chuyển xuống đồi.' },
+              ]}
+            />
+          </div>
+        </div>
       </section>
 
       <section className="food-section section-pad" id="am-thuc" aria-labelledby="food-title">
@@ -171,6 +202,7 @@ export default function Home() {
             <ImageLightbox className="food-gallery-image food-gallery-image-four" src="/images/long-coc/meal-4.jpg" alt="Món ăn Long Cốc số 3" />
             <ImageLightbox className="food-gallery-image food-gallery-image-five" src="/images/long-coc/meal-5.jpg" alt="Món ăn Long Cốc số 4" />
             <ImageLightbox className="food-gallery-image food-gallery-image-six" src="/images/long-coc/meal-6.jpg" alt="Món ăn Long Cốc số 5" />
+            <ImageLightbox className="food-gallery-image food-gallery-image-seven" src="/images/long-coc/meal-7.jpg" alt="Món ăn Long Cốc số 6" />
           </div>
           <div className="menu-previews" aria-label="Ảnh thực đơn Long Cốc">
             <ImageLightbox className="menu-preview menu-preview-one" src="/images/long-coc/menu-1.jpg" alt="Trang thực đơn thứ nhất" />
@@ -241,6 +273,43 @@ export default function Home() {
         <BookingForm />
       </section>
 
+      <section className="gallery-section section-pad" id="gallery" aria-labelledby="gallery-title">
+        <div className="gallery-heading">
+          <p className="section-index">09 · Gallery</p>
+          <h2 id="gallery-title">Những khoảnh khắc<br /><em>ở Long Cốc.</em></h2>
+        </div>
+        <details className="gallery-disclosure">
+          <summary><span>Xem ảnh trong Gallery</span><b aria-hidden="true">+</b></summary>
+          <div className="gallery-grid" aria-label="Thư viện ảnh blog Long Cốc">
+            {galleryImages.map((image) => (
+              <figure className="gallery-item" key={image}>
+                <ImageLightbox className="gallery-image" src={`/images/gallery/${image}`} alt="Khoảnh khắc tại Long Cốc" style={{ backgroundImage: `url("/images/gallery/${image}")` }} />
+              </figure>
+            ))}
+          </div>
+        </details>
+        <details className="journal-disclosure">
+          <summary>
+            <span><strong>Nhật ký Long Cốc</strong><small>Ba câu chuyện nhỏ từ ngôi nhà và vùng đồi chè</small></span>
+            <b aria-hidden="true">+</b>
+          </summary>
+          <div className="journal-grid">
+            <article className="journal-card">
+              <div className="journal-image experience-image-materials" aria-hidden="true" />
+              <StoryDialog number="01" kicker="Vòng đời mới" title="Vẻ đẹp của những điều được làm lại." caption={blog1Caption} />
+            </article>
+            <article className="journal-card">
+              <div className="journal-image experience-image-stream" aria-hidden="true" />
+              <StoryDialog number="02" kicker="Giữa thiên nhiên" title="Dòng suối và bình yên." caption={blog2Caption} />
+            </article>
+            <article className="journal-card">
+              <div className="journal-image experience-image-reborn" aria-hidden="true" />
+              <StoryDialog number="03" kicker="Những bông hoa không héo" title="Câu chuyện sống lại của rác." caption={blog3Caption} />
+            </article>
+          </div>
+        </details>
+      </section>
+
       <footer className="site-footer">
         <div className="footer-inner">
           <div className="footer-brand"><span className="footer-logo" aria-hidden="true" /><strong>Long Cốc<br />Recycling Home</strong></div>
@@ -252,6 +321,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
+      <ActivityDialog />
       <GuestChat />
     </main>
   );
